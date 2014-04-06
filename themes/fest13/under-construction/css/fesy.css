@@ -1,0 +1,125 @@
+body {
+    background: #0f080d;
+}
+
+img {
+    max-width: 100%;
+}
+hr {
+    width: 66.6%;
+    margin: 1.2em auto;
+}
+.content-wrapper {
+    z-index: 99;
+    position: relative;
+    margin: 0 auto;
+    max-width: 960px;
+    height: auto;
+    border-radius: 0.311em;
+}
+
+#fest-splash-wrapper {
+    float: left;
+    width: 66%;
+    margin-top: 76px;
+}
+
+#prefest-splash {
+    width: 260px;
+    margin-top: 40px;
+    max-width: 55%;
+}
+.memo-wrapper {
+    float: right;
+    width: 33%;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Open Sans', 'Futura' sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 2.5em;
+}
+.memo-wrapper h1 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0.8em 0 .1em;
+    letter-spacing: -0.01em;
+}
+
+.memo-wrapper h1 strong {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.memo-wrapper h4 {
+    font-size: 0.9em;
+    line-height: 1.13em;
+    letter-spacing: 0.01em;
+    margin: 0;
+}
+#old-news a {
+    color: #fff;
+    font-size: 1.13em;
+    font-weight: 400;
+    margin: 0em;
+    font-family: 'Oswald';
+    text-decoration: underline;
+}
+#old-news h5 {
+    font-size: 14px;
+    margin: 0.0em;
+    color: #fff;
+}
+#merch {
+    margin-bottom: 1em;
+}
+#merch a {
+    font-size: 1.5em;
+}
+
+#social {
+    margin: 1.5em;
+    color: #fff;
+}
+#social img {
+    height: 32px;
+    width: 32px;
+    max-height: 32px;
+    max-width: 32px;
+}
+
+
+@media screen 
+and (max-width : 720px) {
+    .content-wrapper {
+        top: 0;
+        height: auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    #fest-splash-wrapper {
+        float: inherit;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .memo-wrapper {
+        float: right;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    #prefest-splash {
+        max-width: 44%;
+        margin-top: 0;
+    }
+    .memo-wrapper h1 {
+        font-size: 1.4em;
+    }
+    #old-news a {
+        font-size: 1em;
+    }
+}

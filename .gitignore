@@ -1,0 +1,9 @@
+/uploads/
+/blogs.dir/
+upgrade/
+backup-db/
+advanced-cache.php
+wp-cache-config.php
+*.log
+cache/
+backups/

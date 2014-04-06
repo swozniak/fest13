@@ -3,6 +3,8 @@
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
 
+include_once( get_stylesheet_directory() . '/functions/products.php' );
+
 
 // Add thumbnail support
 add_theme_support( 'post-thumbnails' );

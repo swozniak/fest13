@@ -27,6 +27,15 @@ if ( function_exists( 'register_sidebar' ) ) {
         'before_title' => '<h4>',
         'after_title' => '</h4>',
      ) );
+
+	register_sidebar( array(
+		'name' => 'Fest 13 Sidebar: Store',
+		'id' => 'fest13-store',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+     ) );
 }
 
 function get_attachment_id_from_src( $image_src ) {

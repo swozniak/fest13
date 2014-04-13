@@ -1,18 +1,25 @@
 .page-template-page-templatesstore-php {
 	#content {
 		#content-column {
-			min-height: 800px;
+			min-height: 930px;
 
-			a.button {
-				@extend .btn;
-				background-color: $purple;
-				color: $yellow;
-				font-weight: bold;
+			a {
 				text-decoration: none;
 
 				&:hover {
-					background-color: $purpleDark;
-					color: $yellow;
+						text-decoration: underline;
+				}
+			}
+
+			a.button {
+				@include fest-btn;
+			}
+
+			.price {
+				color: $yellow;
+
+				del {
+					color: $gray;
 				}
 			}
 
@@ -21,7 +28,7 @@
 				margin-bottom: 20px;
 				li {
 					margin-bottom: -2px;
-					margin-right: 10px;
+					margin-right: 8px;
 					&.active {
 						a {
 							background-color: $greenDark;
@@ -48,6 +55,7 @@
 				width: 100%;
 
 				ul.products {
+					text-align: center;
 					li.product {
 						width: 100%;
 

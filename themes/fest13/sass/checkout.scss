@@ -1,0 +1,16 @@
+.page-template-page-templatescheckout-php {
+	#content {
+		form.checkout {
+			a {
+				color: $gray;
+				text-decoration: none;
+			}
+
+			ul {
+				li {
+					color: $gray;
+				}
+			}
+		}
+	}
+}

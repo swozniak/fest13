@@ -22,5 +22,7 @@
 		$(window).on('resize', function () {
 			adjustColumns();
 		});
+
+		$( '.button.wc-backward' ).attr( 'href', 'http://thefestfl.com/store/' );
 	});
 })(jQuery);

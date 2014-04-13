@@ -2,8 +2,9 @@
 	function get_products( $args = array() ) {
 		$defaults = array(
 			'post_type' => 'product',
-			'post_status' => 'publish',
+			'post_status' => 'publish, draft',
 			'posts_per_page' => -1,
+			'orderby' => 'menu_order',
 			'order' => 'ASC',
 		);	
 

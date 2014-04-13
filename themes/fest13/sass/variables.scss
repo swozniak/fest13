@@ -4,4 +4,13 @@ $purpleDark: darken( $purple, 10% );
 $yellow: #ede33d;
 
 $green: #307f87;
-$greenDark: darken( $green, 10% );
+$greenDark: darken( $green, 5% );
+
+$white: #FFFFFF;
+$black: #000000;
+$grayDarker:            lighten($black, 13.5%); // #222
+$grayDark:              lighten($black, 20%);   // #333
+$gray:                  lighten($black, 33.5%); // #555
+$grayLight:             lighten($black, 60%);   // #999
+$grayLighter:           lighten($black, 88%);   // #e0e0e0
+$grayLightest:          lighten($black, 94%);   // #f0f0f0

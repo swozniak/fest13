@@ -4,6 +4,7 @@
 @ini_set( 'max_execution_time', '300' );
 
 include_once( get_stylesheet_directory() . '/functions/products.php' );
+include_once( get_stylesheet_directory() . '/functions/add-fee.php' );
 
 
 // Add thumbnail support

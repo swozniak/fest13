@@ -1,0 +1,29 @@
+.page-template-page-templatescart-php {
+	.woocommerce {
+		.button {
+			@include fest-btn;
+		}
+
+		.woocommerce-message {
+			background: $green;
+			color: $white;
+
+			&:before {
+				height: 2.5em;
+				box-shadow: none;
+			}
+		}
+		form {
+			background-color: $greenDark;
+		}
+
+		.cart_totals {
+			background-color: $greenDark;
+			padding: 10px;
+
+			h2 {
+				margin-top: 0;
+			}
+		}
+	}
+}

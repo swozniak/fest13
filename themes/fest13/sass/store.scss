@@ -1,0 +1,67 @@
+.page-template-page-templatesstore-php {
+	#content {
+		#content-column {
+			min-height: 930px;
+
+			a {
+				text-decoration: none;
+
+				&:hover {
+						text-decoration: underline;
+				}
+			}
+
+			a.button {
+				@include fest-btn;
+			}
+
+			.price {
+				color: $yellow;
+
+				del {
+					color: $gray;
+				}
+			}
+
+			ul.nav {
+				border-bottom: 1px solid $greenDark; 
+				margin-bottom: 20px;
+				li {
+					margin-bottom: -2px;
+					margin-right: 8px;
+					&.active {
+						a {
+							background-color: $greenDark;
+							border: none;
+							pointer-events: none;
+						}
+					}
+
+					a {
+
+						text-decoration: none;
+
+						&:hover {
+							background-color: $greenDark;
+							border: 1px solid $greenDark;
+						}
+					}
+				}
+			}
+
+			.woocommerce {
+				@include inline;
+				vertical-align: top;
+				width: 100%;
+
+				ul.products {
+					text-align: center;
+					li.product {
+						width: 100%;
+
+					}
+				}
+			}
+		}
+	}
+}

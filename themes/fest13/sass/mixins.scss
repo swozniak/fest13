@@ -1,0 +1,21 @@
+@mixin inline {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+@mixin fest-btn {
+	@extend .btn;
+	background: none;
+	background-color: $purple;
+	color: $yellow;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: none;
+
+	&:hover {
+		background: none;
+		background-color: $purpleDark;
+		color: $yellow;
+	}
+}

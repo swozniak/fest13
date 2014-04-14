@@ -5,5 +5,7 @@ backup-db/
 advanced-cache.php
 wp-cache-config.php
 *.log
+*.swp
 cache/
 backups/
+.sass-cache/

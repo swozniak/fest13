@@ -4,6 +4,7 @@
 @ini_set( 'max_execution_time', '300' );
 
 include_once( get_stylesheet_directory() . '/functions/products.php' );
+include_once( get_stylesheet_directory() . '/functions/add-fee.php' );
 
 
 // Add thumbnail support
@@ -22,6 +23,15 @@ if ( function_exists( 'register_sidebar' ) ) {
 	register_sidebar( array(
 		'name' => 'Fest 13 Sidebar: Main',
 		'id' => 'fest13-main',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+     ) );
+
+	register_sidebar( array(
+		'name' => 'Fest 13 Sidebar: Store',
+		'id' => 'fest13-store',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4>',

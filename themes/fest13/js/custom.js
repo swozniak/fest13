@@ -23,6 +23,6 @@
 			adjustColumns();
 		});
 
-		$( '.button.wc-backward' ).attr( 'href', 'http://thefestfl.com/store/' );
+		$( '.button.wc-backward' ).attr( 'href', 'https://thefestfl.com/store/' );
 	});
 })(jQuery);

@@ -5569,6 +5569,12 @@ and (max-width : 479px) {
   display: none; }
 .single-product.woocommerce #content div.product .product_meta {
   display: none; }
+.single-product.woocommerce #content div.product .price {
+  color: #ede33d; }
+  .single-product.woocommerce #content div.product .price del {
+    color: #555555; }
+.single-product.woocommerce #content div.product .stock {
+  color: #ede33d; }
 .single-product.woocommerce #content div.product table.variations {
   font-size: 16px; }
   .single-product.woocommerce #content div.product table.variations label {

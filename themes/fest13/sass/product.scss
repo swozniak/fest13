@@ -26,6 +26,18 @@
 					display: none;
 				}
 
+				.price {
+					color: $yellow;
+
+					del {
+						color: $gray;
+					}
+				}
+
+				.stock {
+					color: $yellow;
+				}
+
 				table.variations {
 					font-size: 16px;
 

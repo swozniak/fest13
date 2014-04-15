@@ -87,7 +87,7 @@ class wp_fest13_featured_band_widget extends WP_Widget {
 			<div class="row">
 				<div class="band col-xs-12">
 					<div class="bands-image-container">
-						<a href="<?php echo site_url($post->post_type . '/' . $post->post_name); ?>">
+                        <a href="<?php echo '/' . $post->post_type . '/' . $post->post_name; ?>">
 							<?php 
 								$photo_urls = wp_get_attachment_image_src( $photo_id, 'thumbnail' );
 								$photo_url = $photo_urls[0];

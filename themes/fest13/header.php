@@ -56,12 +56,12 @@
 	<div class="container">
 	  <header>
 		<div class="row" id="fest-tier-one-sponsors">
-		  <a target="_blank" href="http://www.bandsonabudget.com/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/boab.png" /></a>
-		  <a target="_blank" href="http://www.cwpress.com/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/cwp.png" /></a>
-		  <a target="_blank" href="http://www.orangeamps.com/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/orange.png" /></a>
-		  <a target="_blank" href="http://store.noidearecords.com/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/noidea.png" /></a>
-		  <a target="_blank" href="http://www.sjcdrums.com/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/sjc.png" /></a>
-		  <a target="_blank" href="http://www.pabstblueribbon.com/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/pbr.png" /></a>
+		  <a target="_blank" href="http://www.bandsonabudget.com/" title="Bands on a Budget"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/boab.png" alt="Bands on a Budget" /></a>
+		  <a target="_blank" href="http://www.cwpress.com/" title="Commonwealth Press"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/cwp.png" alt="Commonwealth Press" /></a>
+		  <a target="_blank" href="http://www.orangeamps.com/" title="Orange Amplification"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/orange.png" alt="Orange Amplification" /></a>
+		  <a target="_blank" href="http://store.noidearecords.com/" title="No Idea Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/noidea.png" alt="No Idea Records" /></a>
+		  <a target="_blank" href="http://www.sjcdrums.com/" title="SJC Drums"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/sjc.png" alt="SJC Drums" /></a>
+		  <a target="_blank" href="http://www.pabstblueribbon.com/" title="Pabst Blue Ribbon"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/pbr.png" alt="Pabst Blue Ribbon" /></a>
 		</div>
 
 		<div class="row" id="fest-splash">

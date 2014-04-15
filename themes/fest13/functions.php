@@ -5,6 +5,7 @@
 
 include_once( get_stylesheet_directory() . '/functions/products.php' );
 include_once( get_stylesheet_directory() . '/functions/add-fee.php' );
+include_once( get_stylesheet_directory() . '/functions/store.php' );
 
 
 // Add thumbnail support

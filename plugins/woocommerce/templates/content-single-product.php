@@ -11,7 +11,6 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
-
 <?php
 	/**
 	 * woocommerce_before_single_product hook

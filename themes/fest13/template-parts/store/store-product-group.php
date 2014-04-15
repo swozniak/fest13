@@ -5,7 +5,6 @@
 				'taxonomy' => 'product_cat',
 				'field' => 'slug',
 				'terms' => array( $product_slug ),
-				//'operator' => 'AND',
 			)
 		)
 	);

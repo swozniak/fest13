@@ -5,6 +5,7 @@
  */
 ?>
 
+<?php check_store_visibility(); ?>
 <?php get_header(); ?>
 
 <div class="col-xs-12 col-md-8" id="content-column">

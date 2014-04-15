@@ -4,7 +4,7 @@
  *
  */
 ?>
-
+<?php check_store_visibility(); ?>
 <?php get_header(); ?>
 
 <?php

@@ -5096,6 +5096,9 @@ body {
   -webkit-text-size-adjust: 100%;
   font-size: 15px; }
 
+.content-container {
+  background-color: #307f87; }
+
 b, strong {
   font-weight: 800; }
 
@@ -5579,6 +5582,8 @@ and (max-width : 479px) {
   font-size: 16px; }
   .single-product.woocommerce #content div.product table.variations label {
     font-size: inherit; }
+  .single-product.woocommerce #content div.product table.variations .value select {
+    margin-bottom: 10px; }
 .single-product.woocommerce #content div.product .woocommerce-tabs ul.tabs {
   display: none; }
 .single-product.woocommerce #content div.product .woocommerce-tabs .panel {

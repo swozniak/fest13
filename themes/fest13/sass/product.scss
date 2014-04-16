@@ -44,6 +44,12 @@
 					label {
 						font-size: inherit;
 					}
+
+					.value {
+						select {
+							margin-bottom: 10px;
+						}
+					}
 				}
 
 				.woocommerce-tabs {

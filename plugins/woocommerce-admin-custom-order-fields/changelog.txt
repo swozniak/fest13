@@ -1,0 +1,13 @@
+*** WooCommerce Admin Custom Order Fields Changelog ***
+
+2014.02.24 - version 1.1.1
+ * Feature - New filter 'wc_admin_custom_order_field_options' for dynamically generating field options
+ * Fix - Option labels are shown in frontend instead of option values
+
+2014.01.20 - version 1.1
+ * Misc - WooCommerce 2.1 compatibility
+ * Misc - Uses SkyVerge Plugin Framework
+ * Localization - Text domain changed from `wc-admin-custom-order-fields` to `woocommerce-admin-custom-order-fields`
+
+2013.11.28 - version 1.0
+ * Initial Release

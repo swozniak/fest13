@@ -9,3 +9,4 @@ wp-cache-config.php
 cache/
 backups/
 .sass-cache/
+themes/fest13/style.css

@@ -1,6 +1,14 @@
 .single-product {
 	&.woocommerce {
 		#content {
+			h1 {
+				font-size: 25px;
+			}
+
+			.onsale {
+				@include linear-gradient( $purple, $purpleDark );
+				color: $yellow;
+			}
 
 			.button {
 				@include fest-btn;
@@ -52,6 +60,26 @@
 					}
 				}
 
+				.bundled_product_summary {
+					display: none;
+				}
+
+				.bundle_price {
+					display: none;
+				}
+
+				.bundle_button {
+					button.button {
+						position: relative;
+						bottom: 30px;
+					}
+
+					.quantity {
+						position: relative;
+						left: 20px;
+					}
+				}
+
 				.woocommerce-tabs {
 					ul.tabs {
 						display: none;
@@ -63,6 +91,10 @@
 						padding: 10px;
 						 h2 {
 							margin: 0;
+						 }
+
+						 &#tab-reviews {
+							 display: none;
 						 }
 					}
 				}

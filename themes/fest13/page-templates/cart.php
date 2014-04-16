@@ -13,6 +13,9 @@
 </div>
 
 <div class="hidden-xs col-md-4" id="content-column">
+	<div class="sidebar-backtostore">
+		<a href="<?php echo home_url( 'store/'); ?>">&#171; Back To Store</a>
+	</div>
 	<?php dynamic_sidebar( 'fest13-store' ); ?>
 </div>
 

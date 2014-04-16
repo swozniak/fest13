@@ -3,6 +3,11 @@
 		#content-column {
 			min-height: 930px;
 
+			.onsale {
+				@include linear-gradient( $purple, $purpleDark );
+				color: $yellow;
+			}
+
 			a {
 				text-decoration: none;
 

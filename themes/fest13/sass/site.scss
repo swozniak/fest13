@@ -123,6 +123,18 @@ b, strong { font-weight: 800; }
 	min-height: 666px;
 	background: #307f87;
 	padding: 12px 32px 16px;
+
+	.sidebar-backtostore {
+		margin-bottom: 20px;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 #content-column img {
 	max-width: 100%;

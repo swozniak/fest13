@@ -6,7 +6,7 @@
 	 
 	function pickup_names_checkout_field( $checkout ) {
 	 
-		echo '<div id="pickup_names_checkout_field"><h3><span style="color: red;">*</span> Who needs to pick up the ticket(s)? <span style="color: red;">*</span></h3>';
+		echo '<div id="pickup_names_checkout_field"><h3><span style="color: red;">*</span> Who needs to pick up the stuff? <span style="color: red;">*</span></h3>';
 	 
 		woocommerce_form_field( 'pickup_names', array(
 			'type'          => 'text',

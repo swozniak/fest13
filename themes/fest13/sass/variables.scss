@@ -4,7 +4,9 @@ $purpleDark: darken( $purple, 10% );
 $yellow: #ede33d;
 
 $green: #307f87;
-$greenDark: darken( $green, 5% );
+$greenLight: lighten( $green, 5% );
+$greenDark: darken( $green, 3% );
+$greenDarker: darken( $green, 10% );
 
 $white: #FFFFFF;
 $black: #000000;

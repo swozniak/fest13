@@ -1,14 +1,102 @@
 .page-template-page-templatescheckout-php {
 	#content {
 		form.checkout {
+
+			input, select {
+				height: 30px;
+			}
+
 			a {
 				color: $gray;
 				text-decoration: none;
 			}
 
+			#billing_company_field {
+				display: none;
+			}
+
 			ul {
 				li {
 					color: $gray;
+
+					&.highlighted {
+						background-color: $purple;
+						background-image: none;
+						color: $yellow;
+					}
+				}
+			}
+
+			textarea {
+				width: 300px;
+				height: 490px;
+			}
+
+			#customer_details {
+				position: relative;
+			}
+
+			#pickup_names_checkout_field {
+				position: absolute;
+				left: 0;
+				bottom: -120px;
+				width: 600px;
+
+				h3 {
+					margin-bottom: 0;
+				}
+
+				label {
+					line-height: 20px;
+				}
+
+				input {
+					width: 600px;	
+					height: 35px;
+				}
+			}
+
+		}
+
+		h3#order_review_heading {
+			margin-top: 160px;
+		}
+
+		table.shop_table {
+			background-color: $greenDark;
+		}
+
+		#payment {
+				ul.payment_methods {
+				background-color: $greenDark;
+				color: $white;
+				border-bottom: none;
+
+				label {
+					color: $white;
+				}
+
+				.payment_box {
+					background: $greenLight;	
+					color: $white;
+					text-shadow: none;
+
+					&:after {
+						border-bottom-color: $greenLight;
+					}
+				}
+			}
+		}
+
+		div.form-row.place-order {
+			background-color: $greenDark;
+			border: none;
+
+			a {
+				color: $yellow;
+
+				&:hover {
+					text-decoration: underline;
 				}
 			}
 		}

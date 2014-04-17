@@ -32,6 +32,28 @@
 
 	add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
+
+	/**
+	 * Update the order meta with field value
+	 */
+	add_action( 'woocommerce_checkout_update_order_meta', 'pickup_names_checkout_field_update_order_meta' );
+	 
+	function pickup_names_checkout_field_update_order_meta( $order_id ) {
+		if ( ! empty( $_POST['pickup_names'] ) ) {
+			update_post_meta( $order_id, 'Pickup Names', sanitize_text_field( $_POST['pickup_names'] ) );
+		}
+	}	
+
+	/**
+	 * Display field value on the order edit page
+	 */
+	add_action( 'woocommerce_admin_order_data_after_billing_address', 'pickup_names_checkout_field_display_admin_order_meta', 10, 1 );
+	 
+	function pickup_names_checkout_field_display_admin_order_meta($order){
+		echo '<p><strong>'.__('Pickup Names').':</strong> ' . get_post_meta( $order->id, 'Pickup Names', true ) . '</p>';
+	}
+
+
 	// Our hooked in function - $fields is passed via the filter!
 	function custom_override_checkout_fields( $fields ) {
 		 $fields['order']['order_comments']['placeholder'] = 'Please leave any special instructions we may need on registration day.';

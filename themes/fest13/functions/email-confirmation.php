@@ -9,6 +9,8 @@
 	$order_count = wp_count_posts( 'shop_order' );
 	$orders_at_a_time = 50;
 	$sent = 0;
+	$log_file = get_stylesheet_directory() . '/functions/logs/email-confirmation-log-' . mktime() . '.log';
+	$fh = fopen( $log_file, 'w' );
 
 	for( $offset = 0; $offset <= $order_count->publish; $offset += $orders_at_a_time ) :
 		$args = array(
@@ -37,15 +39,16 @@
 			endforeach;
 
 			if( $send_email ) :
-				 $sent++;
-				echo get_the_ID() . "\n\n";
+				$sent++;
+				fwrite( $fh, "Sending email for order $order_id\n" );
 				//$mailer = $woocommerce->mailer();
 				//$email = $mailer->emails['WC_Email_Customer_Processing_Order'];
 				//$email->trigger( $order_id );
+				fwrite( $fh, "Email sent for order $order_id\n\n" );
 			endif;
 		endwhile;
-		sleep( 5 );
+		//sleep( 5 );
 	endfor;
-
-
+	fwrite( $fh, "$sent total emails sent\n" );
+	fclose( $fh );
 ?>

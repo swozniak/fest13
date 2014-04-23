@@ -6,9 +6,7 @@ Version: 1.0
 Author: Steve Wozniak
 License: GPL2
 */
-?>
 
-<?php
 require_once('widgets/featured_band.php');
 require_once('widgets/featured_video.php');
 require_once('widgets/social_media.php');
@@ -41,4 +39,3 @@ function unregister_default_widgets() {
 	unregister_widget('WP_Nav_Menu_Widget');
 	unregister_widget('Twenty_Eleven_Ephemera_Widget');
 }
-?>

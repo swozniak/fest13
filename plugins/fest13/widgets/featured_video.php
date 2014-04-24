@@ -59,7 +59,7 @@ class wp_fest13_featured_video_widget extends WP_Widget {
 		if( $youtubeUrl ) {
 			parse_str( parse_url( $youtubeUrl, PHP_URL_QUERY ), $youtubeQueryString );
 			echo '<div>
-				<iframe id="ytplayer" type="text/html" width="290" height="218" src="http://www.youtube.com/embed/' . $youtubeQueryString['v'] . '" frameborder="0"></iframe>
+				<iframe id="ytplayer" type="text/html" width="290" height="218" src="//www.youtube.com/embed/' . $youtubeQueryString['v'] . '" frameborder="0"></iframe>
 				</div>';
 		}
 		echo '</div>';

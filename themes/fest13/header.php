@@ -36,7 +36,7 @@
 	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
 
 
 	<script>

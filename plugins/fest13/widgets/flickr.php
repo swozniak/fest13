@@ -52,6 +52,9 @@ class wp_fest13_flickr_widget extends WP_Widget {
 				$src = esc_url( $photo->media->m );
 				$title = esc_attr( $photo->title );
 
+				// http or https
+				$src = str_replace( 'http://', '//', $src);
+
 				$item = sprintf( '<a target="_blank" href="%s"><img src="%s" alt="%s" /></a>', $link, $src, $title );
 				$item = sprintf( '<div class="col-xs-6 fest-flickr-item" style="background-image: url(\'%s\')">%s</div>', $src, $item );
 				echo $item;

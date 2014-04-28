@@ -53,25 +53,35 @@
 	}, ];
 
 	function fetch(playlist) {
-		var videoURL = '//www.youtube.com/embed/',
-			playListURL = ['http://gdata.youtube.com/feeds/api/playlists', playlist.youtube_id, '?v=2&autoplay=1&fs=1&alt=json&callback=?'].join('/');
+		var playListURL = ['//gdata.youtube.com/feeds/api/playlists', playlist.youtube_id, '?v=2&autoplay=1&fs=1&alt=json&callback=?'].join('/');
 
-		$.getJSON(playListURL, function (data) {
-			var list_data = '';
-			$.each(data.feed.entry, function (i, item) {
-				var videoTitle = item.title.$t,
-					author = item.media$group.media$credit[0].$t,
-					href = item.link[0].href,
-					feedURL = item.link[1].href,
-					fragments = feedURL.split('/'),
-					videoID = fragments[fragments.length - 2],
-					url = videoURL + videoID,
-					thumb = "http://img.youtube.com/vi/" + videoID + "/default.jpg";
-
-				list_data += '<li class="video-thumb" data-href="' + href + '" data-title="' + videoTitle + '" data-author="' + author + '" data-url="' + url + '"><h5>' + videoTitle + '</h5><img alt="' + videoTitle + '" src="' + thumb + '"></li>';
-			});
-			$(list_data).appendTo(['.', playlist.id].join(''));
+		$.getJSON(playListURL + '&max-results=50&start-index=1', function (data) {
+			/* 
+			openSearch$itemsPerPage.$t = 25;
+			openSearch$startIndex.$t = 1;
+			openSearch$totalResults.$t = 165;
+			*/
+			populate(data.feed, playlist);
 		});
+	}
+
+	function populate(feed, playlist) {
+		var list_data = '',
+			videoURL = '//www.youtube.com/embed/';
+
+		$.each(feed.entry, function (i, item) {
+			var videoTitle = item.title.$t,
+				author = item.media$group.media$credit[0].$t,
+				href = item.link[0].href,
+				feedURL = item.link[1].href,
+				fragments = feedURL.split('/'),
+				videoID = fragments[fragments.length - 2],
+				url = videoURL + videoID,
+				thumb = "//img.youtube.com/vi/" + videoID + "/default.jpg";
+
+			list_data += '<li class="video-thumb" data-href="' + href + '" data-title="' + videoTitle + '" data-author="' + author + '" data-url="' + url + '"><h5>' + videoTitle + '</h5><img alt="' + videoTitle + '" src="' + thumb + '"></li>';
+		});
+		$(list_data).appendTo(['.', playlist.id].join(''));
 	}
 
 	$(document).ready(function () {

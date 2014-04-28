@@ -5430,10 +5430,6 @@ hr.widget-divider {
 #prefest-checkbox.active {
   background-position: -20px 0; }
 
-.bands-filter {
-  line-height: 40px;
-  height: 40px; }
-
 .bands-search {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
@@ -5473,12 +5469,33 @@ input#band-search {
   font-size: 14px; }
 
 /* responsive */
-@media only screen and (min-width: 700px) and (max-width: 990px) {
-  #fest-tier-one-sponsors > a > img {
-    height: 75px; } }
+@media only screen and (min-width: 700px) and (max-width: 769px) {
+  #fest-footer .site-info {
+    margin-top: -44px; }
+
+  #fest-tier-one-sponsors a img {
+    height: 75px; }
+
+  #fest-tier-two-sponsors a img {
+    height: 60px; }
+
+  #fest-tier-three-sponsors a img {
+    height: 45px; } }
 @media only screen and (min-width: 480px) and (max-width: 699px) {
-  #fest-tier-one-sponsors > a > img {
+  footer .social-media img {
+    height: 32px; }
+
+  #fest-footer .site-info {
+    margin-top: -44px; }
+
+  #fest-tier-one-sponsors a img {
     height: 50px; }
+
+  #fest-tier-two-sponsors a img {
+    height: 32px; }
+
+  #fest-tier-three-sponsors a img {
+    height: 24px; }
 
   .nav li a {
     font-size: 13px;
@@ -5487,11 +5504,105 @@ input#band-search {
   .navbar {
     margin-top: -40px; } }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-  #fest-tier-one-sponsors > a > img {
-    height: 40px; }
+  .bands-search {
+    margin-top: 12px;
+    text-align: left; }
+
+  #band-search {
+    margin: 0;
+    width: 100%; }
+
+  footer .social-media img {
+    height: 32px;
+    margin-bottom: 8px; }
+
+  #fest-footer .site-info, #fest-footer .site-info a {
+    font-size: 12px; }
+
+  #fest-tier-one-sponsors a img {
+    height: 32px; }
+
+  #fest-tier-two-sponsors a img {
+    height: 28px; }
+
+  #fest-tier-three-sponsors a img {
+    height: 24px; }
 
   .navbar {
-    margin-top: -40px; } }
+    margin-top: -48px; } }
+@media only screen and (min-width: 770px) and (max-width: 990px) {
+  #fest-footer .site-info {
+    margin-top: 10px; } }
+@media only screen and (min-width: 481px) and (max-width: 699px) {
+  #fest-footer .site-info {
+    margin-top: -32px;
+    font-size: 12px; } }
+.video-sidebar {
+  padding-top: 24px; }
+  .video-sidebar h4 {
+    background: #0c1f21;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: default;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 25px;
+    padding: 8px 12px;
+    margin: -8px 0 16px; }
+  .video-sidebar ul {
+    padding-left: 16px; }
+  .video-sidebar li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+    background: #307f87;
+    text-transform: uppercase;
+    padding: 4px 10px 10px;
+    border-radius: 8px; }
+    .video-sidebar li:hover {
+      background: #3ea9b3; }
+  .video-sidebar .video-thumb h5 {
+    font-family: Oswald;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 700; }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+
+.video-container iframe, .video-container object, .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.playlist-container {
+  padding-top: 16px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 600px; }
+
+h3.video-title {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 26px; }
+
+input#video-search {
+  font-family: 'Oswald', sans-serif;
+  margin-left: 8px;
+  color: #0f080d;
+  border: 2px solid #7f8078;
+  background-color: #fff;
+  padding: 4px;
+  text-transform: uppercase;
+  margin-bottom: 8px; }
+
 .page-template-page-templatesstore-php #content #content-column, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product {
   min-height: 930px; }
   .page-template-page-templatesstore-php #content #content-column .onsale, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .onsale, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .onsale {

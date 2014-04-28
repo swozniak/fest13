@@ -370,10 +370,7 @@ hr.widget-divider {
 	background-position: -20px 0;
 }
 
-.bands-filter {
-	line-height: 40px;
-	height: 40px;
-}
+
 .bands-search {
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
@@ -421,16 +418,39 @@ input#band-search {
 /* responsive */
 @media only screen 
 and (min-width : 700px) 
-and (max-width : 990px) {
-	#fest-tier-one-sponsors>a>img {
+and (max-width : 769px) {
+	#fest-footer .site-info {
+		margin-top: -44px;
+	}
+	#fest-tier-one-sponsors a img {
 		height: 75px;
 	}
+	#fest-tier-two-sponsors a img {
+		height: 60px;
+	}
+	#fest-tier-three-sponsors a img {
+		height: 45px;
+	}
 }
+
+
 @media only screen 
 and (min-width : 480px) 
 and (max-width : 699px) {
-	#fest-tier-one-sponsors>a>img {
+	footer .social-media img {
+		height: 32px;
+	}
+	#fest-footer .site-info {
+		margin-top: -44px;
+	}
+	#fest-tier-one-sponsors a img {
 		height: 50px;
+	}
+	#fest-tier-two-sponsors a img {
+		height: 32px;
+	}
+	#fest-tier-three-sponsors a img {
+		height: 24px;
 	}
 	.nav li a {
 		font-size: 13px;
@@ -443,10 +463,50 @@ and (max-width : 699px) {
 @media only screen 
 and (min-width : 320px) 
 and (max-width : 479px) {
-	#fest-tier-one-sponsors>a>img {
-		height: 40px;
+
+	.bands-search {
+		margin-top: 12px;
+		text-align: left;
+	}
+	#band-search {
+		margin: 0;
+		width: 100%;
+	}
+
+
+	footer .social-media img {
+		height: 32px;
+		margin-bottom: 8px;
+	}
+	#fest-footer .site-info, #fest-footer .site-info a {
+		font-size: 12px;
+	}
+	#fest-tier-one-sponsors a img {
+		height: 32px;
+	}
+	#fest-tier-two-sponsors a img {
+		height: 28px;
+	}
+	#fest-tier-three-sponsors a img {
+		height: 24px;
 	}
 	.navbar {
-		margin-top: -40px;
+		margin-top: -48px;
+	}
+}
+
+@media only screen 
+and (min-width : 770px) 
+and (max-width : 990px) {
+	#fest-footer .site-info {
+		margin-top: 10px;
+	}
+}
+@media only screen 
+and (min-width : 481px) 
+and (max-width : 699px) {
+	#fest-footer .site-info {
+		margin-top: -32px;
+		font-size: 12px;
 	}
 }

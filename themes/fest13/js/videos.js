@@ -97,7 +97,7 @@
 
 			$('.video-title').text(videoInfo.data('title'));
 			$videoAuthor.text(['@', videoInfo.data('author')].join(''));
-			$videoAuthor.attr('href', ['//youtube.com/user/', videoInfo.data('author')].join(''))
+			$videoAuthor.attr('href', ['http://youtube.com/user/', videoInfo.data('author')].join(''))
 
 			$('html, body').animate({
 				scrollTop: parseInt($('.content-container').offset().top)

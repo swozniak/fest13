@@ -510,3 +510,8 @@ and (max-width : 699px) {
 		font-size: 12px;
 	}
 }
+.post img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}

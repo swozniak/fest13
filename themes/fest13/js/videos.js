@@ -53,7 +53,7 @@
 	}, ];
 
 	function fetch(playlist) {
-		var playListURL = ['//gdata.youtube.com/feeds/api/playlists', playlist.youtube_id, '?v=2&autoplay=1&fs=1&alt=json&callback=?'].join('/');
+		var playListURL = ['//gdata.youtube.com/feeds/api/playlists', playlist.youtube_id, '?v=2&max-results=50&autoplay=1&fs=1&alt=json&callback=?'].join('/');
 
 		$.getJSON(playListURL + '&max-results=50&start-index=1', function (data) {
 			/* 

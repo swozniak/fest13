@@ -43,11 +43,11 @@ function no_articles_allowed( $a, $b ) {
 		<div class="row" id="bands-container">
 		<?php
 			$args = array( 
-				'posts_per_page' => 311,
-				'post_type' => 'bands',
-				'order'=> 'ASC',
-				'orderby' => 'title',
-				'post_status' => 'publish' 
+					'posts_per_page' => 666,
+					'post_type' => 'bands',
+					'order'=> 'ASC',
+					'orderby' => 'title',
+					'post_status' => 'publish' 
 				);
 			$postslist = get_posts( $args );
 			usort( $postslist, 'no_articles_allowed' );

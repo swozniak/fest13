@@ -5096,9 +5096,6 @@ body {
   -webkit-text-size-adjust: 100%;
   font-size: 15px; }
 
-.content-container {
-  background-color: #307f87; }
-
 b, strong {
   font-weight: 800; }
 
@@ -5537,6 +5534,11 @@ input#band-search {
   #fest-footer .site-info {
     margin-top: -32px;
     font-size: 12px; } }
+.post img {
+  display: block;
+  height: auto;
+  max-width: 100%; }
+
 .video-sidebar {
   padding-top: 24px; }
   .video-sidebar h4 {
@@ -5586,7 +5588,8 @@ input#band-search {
   padding-top: 16px;
   overflow-x: hidden;
   overflow-y: scroll;
-  max-height: 600px; }
+  max-height: 600px;
+  margin-top: 16px; }
 
 h3.video-title {
   font-family: 'Oswald', sans-serif;

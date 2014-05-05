@@ -12,6 +12,7 @@ require_once('widgets/featured_video.php');
 require_once('widgets/social_media.php');
 require_once('widgets/upload-ad.php');
 require_once('widgets/flickr.php');
+require_once('widgets/carbon.php');
 require_once('widgets/divider.php');
 
 add_action( 'widgets_init', 'unregister_default_widgets' );
@@ -20,6 +21,7 @@ add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fe
 add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_social_media_widget" );' ) );
 add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_upload_ad_widget" );' ) );
 add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_flickr_widget" );' ) );
+add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_carbon_widget" );' ) );
 add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_divider_widget" );' ) );
 
 

@@ -89,7 +89,7 @@ wp_enqueue_script( 'youtube-friend', get_template_directory_uri() . '/js/videos.
 
 				<li class="video-thumb" 
 					data-href="<?php echo $href; ?>" 
-					data-title="<?php echo $title; ?>" 
+					data-title='<?php echo $title; ?>'
 					data-author="<?php echo $author; ?>" 
 					data-url="<?php echo $url; ?>">
 					<h5><?php echo $title; ?></h5>

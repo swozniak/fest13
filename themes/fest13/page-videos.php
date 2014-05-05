@@ -32,41 +32,73 @@ wp_enqueue_script( 'youtube-friend', get_template_directory_uri() . '/js/videos.
 		<input id="video-search" />
 	</div>
 	<div class="playlist-container">
-		<h4>FEST 12</h4>
-		<ul class="fest12"></ul>
+		<?php
+			$playlists = json_decode('[{
+				"id": "fest12",
+				"title": "Fest 12"
+			}, {
+				"id": "fest11",
+				"title": "Fest 11"
+			}, {
+				"id": "fest10",
+				"title": "Fest 10"
+			}, {
+				"id": "fest9",
+				"title": "Fest 9"
+			}, {
+				"id": "fest8",
+				"title": "Fest 8"
+			}, {
+				"id": "fest7",
+				"title": "Fest 7"
+			}, {
+				"id": "fest6",
+				"title": "Fest 6"
+			}, {
+				"id": "fest5",
+				"title": "Fest 5"
+			}, {
+				"id": "fest4",
+				"title": "Fest 4"
+			}, {
+				"id": "fest3",
+				"title": "Fest 3"
+			}, {
+				"id": "fest2",
+				"title": "Fest 2"
+			}, {
+				"id": "fest1",
+				"title": "Fest 1"
+			}]', true );
 
-		<h4>FEST 11</h4>
-		<ul class="fest11"></ul>
+		foreach( $playlists as $playlist ) {
+			$data = get_transient( implode( '-', array( 'videos', $playlist['id'] ) ) );
+			echo implode( '', array( '<h4>', $playlist['title'], '</h4>' ) );
+			echo implode( '"', array( '<ul class=', $playlist['id'], '>' ) );
 
-		<h4>FEST 10</h4>
-		<ul class="fest10"></ul>
-		
-		<h4>FEST 9</h4>
-		<ul class="fest9"></ul>
-		
-		<h4>FEST 8</h4>
-		<ul class="fest8"></ul>
-		
-		<h4>FEST 7</h4>
-		<ul class="fest7"></ul>
-		
-		<h4>FEST 6</h4>
-		<ul class="fest6"></ul>
-		
-		<h4>FEST 5</h4>
-		<ul class="fest5"></ul>
-		
-		<h4>FEST 4</h4>
-		<ul class="fest4"></ul>
-		
-		<h4>FEST 3</h4>
-		<ul class="fest3"></ul>
-		
-		<h4>FEST 2</h4>
-		<ul class="fest2"></ul>
-		
-		<h4>FEST 1</h4>
-		<ul class="fest1"></ul>
+			foreach ( $data as $item ) {
+				$title = $item->title->{'$t'};
+				$author = $item->{'media$group'}->{'media$credit'}[0]->{'$t'};
+				$href = $item->link[0]->href;
+				$fragments = explode( '/', $item->link[1]->href );
+				$videoID = $fragments[count( $fragments ) - 2];
+				$videoURL = '//www.youtube.com/embed/';
+				$url =  $videoURL . $videoID;
+				$thumb = '//img.youtube.com/vi/' . $videoID . '/default.jpg'; ?>
+				
+
+				<li class="video-thumb" 
+					data-href="<?php echo $href; ?>" 
+					data-title="<?php echo $title; ?>" 
+					data-author="<?php echo $author; ?>" 
+					data-url="<?php echo $url; ?>">
+					<h5><?php echo $title; ?></h5>
+					<img alt="<?php echo $title; ?>" src="<?php echo $thumb; ?>">
+				</li>
+				<?
+			}
+			echo '</ul>';
+		} ?>
 	</div>
 </div>
 

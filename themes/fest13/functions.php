@@ -8,6 +8,12 @@ include_once( get_stylesheet_directory() . '/functions/add-fee.php' );
 include_once( get_stylesheet_directory() . '/functions/store.php' );
 include_once( get_stylesheet_directory() . '/functions/checkout.php' );
 
+include_once( get_stylesheet_directory() . '/functions/videos/fest-videos.php' );
+
+
+
+
+
 
 // Add thumbnail support
 add_theme_support( 'post-thumbnails' );

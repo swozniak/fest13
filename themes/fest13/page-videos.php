@@ -17,11 +17,11 @@ wp_enqueue_script( 'youtube-friend', get_template_directory_uri() . '/js/videos.
 		</div>
 	</header>
 	<div class="video-container">
-		<iframe id="ytplayer" type="text/html" width="560" height="315" src="//www.youtube.com/embed/Th9i8ODfkG8?fs=1" frameborder="0"></iframe>
+		<iframe id="ytplayer" type="text/html" width="560" height="315" src="//www.youtube.com/embed/CoFrJ-yYxQc?fs=1" frameborder="0"></iframe>
 	</div>
 
 	<div class="video-meta">
-		<h3 class="video-title">The Fest 12 Highlights</h3>
+		<h3 class="video-title">The FEST 12 Highlight Video</h3>
 		Uploaded by <a target="_blank" href="//youtube.com/user/TheFestFLVideos/" class="video-author">@TheFestFLVideos</a>
 	</div>
 </div>

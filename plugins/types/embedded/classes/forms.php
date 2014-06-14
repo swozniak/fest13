@@ -1,7 +1,14 @@
 <?php
 
 /**
+ *
  * Returns HTML formatted output for elements and handles form submission.
+ *
+ * $HeadURL: https://www.onthegosystems.com/misc_svn/cck/tags/1.5.7/embedded/classes/forms.php $
+ * $LastChangedDate: 2014-05-26 15:12:51 +0200 (Mon, 26 May 2014) $
+ * $LastChangedRevision: 22752 $
+ * $LastChangedBy: marcin $
+ *
  *
  * @version 1.0
  */
@@ -711,7 +718,7 @@ class Enlimbo_Forms_Wpcf
                     == $value['#value']) ? ' selected="selected"' : '';
             $element['_render']['element'] .= $this->_setElementAttributes( $value );
             $element['_render']['element'] .= '>';
-            $element['_render']['element'] .= isset( $value['#title'] ) ? $value['#title'] : $value['#value'];
+            $element['_render']['element'] .= $this->strip( isset( $value['#title'] ) ? $value['#title'] : $value['#value'] );
             $element['_render']['element'] .= "</option>\r\n";
         }
         $element['_render']['element'] .= "</select>\r\n";
@@ -941,4 +948,13 @@ class Enlimbo_Forms_Wpcf
         return 0;
     }
 
+    private function strip($value)
+    {
+        if ( empty( $value ) ) {
+            return $value;
+        }
+        $re = array( "/\\\\'/", '/\\\\"/' );
+        $to = array( "'", '"' );
+        return esc_attr( preg_replace( $re, $to, $value ) );
+    }
 }

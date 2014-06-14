@@ -2,6 +2,11 @@
 /**
  * Returns HTML formatted output for elements and handles form submission.
  *
+ * $HeadURL: https://www.onthegosystems.com/misc_svn/common/tags/Views-1.6.1-Types-1.5.7/classes/forms.php $
+ * $LastChangedDate: 2014-05-09 13:24:35 +0200 (Fri, 09 May 2014) $
+ * $LastChangedRevision: 22197 $
+ * $LastChangedBy: marcin $
+ *
  * @version 1.0
  */
 if (!class_exists('Enlimbo_Forms_Wpcf')) {

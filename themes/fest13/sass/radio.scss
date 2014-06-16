@@ -51,26 +51,9 @@
 	}
 	/* fixing now playing image */
 	.wp-playlist-current-item > img {
-		max-width: 40% !important;
-	}
-
-	/* scrolling tracks */
-	.fest13-fixed-scrolling-fix {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 8em;
-		z-index: 3;
-		background: #307f87;
-	}
-
-	@media only screen 
-	and (min-width : 960px) {
-		.fest13-fixed-scrolling-fix {
-			max-width: 960px;
-			margin: 0 auto;
-		}
+			max-width: 66px !important;
+			height: 66px !important;
+			width: 66px !important;
 	}
 
 	.wp-playlist-current-item {
@@ -86,7 +69,30 @@
 	.wp-playlist-tracks {
 		overflow: hidden;
 		overflow-y: scroll;
-		margin-top: 7.5em !important;
+		margin-top: 3.75em !important;
 		z-index: 1;
+	}
+
+}
+/* scrolling tracks */
+.fest13-fixed-scrolling-fix {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 8em;
+	z-index: 3;
+	background: #307f87;
+}
+
+
+@media only screen 
+and (min-width : 960px) {
+	.fest13-fixed-scrolling-fix {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.wp-playlist-tracks {
+		margin-top: 7.5em !important;
 	}
 }

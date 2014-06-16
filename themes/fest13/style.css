@@ -5614,8 +5614,7 @@ input#video-search {
 .radio-content {
   /* new styles */
   /* overall mediaelement overrides */
-  /* fixing now playing image */
-  /* scrolling tracks */ }
+  /* fixing now playing image */ }
   .radio-content .wp-playlist-current-item {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase; }
@@ -5648,19 +5647,9 @@ input#video-search {
   .radio-content .radio-content {
     padding: inherit !important; }
   .radio-content .wp-playlist-current-item > img {
-    max-width: 40% !important; }
-  .radio-content .fest13-fixed-scrolling-fix {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8em;
-    z-index: 3;
-    background: #307f87; }
-  @media only screen and (min-width: 960px) {
-    .radio-content .fest13-fixed-scrolling-fix {
-      max-width: 960px;
-      margin: 0 auto; } }
+    max-width: 66px !important;
+    height: 66px !important;
+    width: 66px !important; }
   .radio-content .wp-playlist-current-item {
     position: fixed !important;
     top: 1em;
@@ -5672,9 +5661,26 @@ input#video-search {
   .radio-content .wp-playlist-tracks {
     overflow: hidden;
     overflow-y: scroll;
-    margin-top: 7.5em !important;
+    margin-top: 3.75em !important;
     z-index: 1; }
 
+/* scrolling tracks */
+.fest13-fixed-scrolling-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8em;
+  z-index: 3;
+  background: #307f87; }
+
+@media only screen and (min-width: 960px) {
+  .fest13-fixed-scrolling-fix {
+    max-width: 960px;
+    margin: 0 auto; }
+
+  .wp-playlist-tracks {
+    margin-top: 7.5em !important; } }
 .page-template-page-templatesstore-php #content #content-column, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product {
   min-height: 930px; }
   .page-template-page-templatesstore-php #content #content-column .onsale, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .onsale, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .onsale {

@@ -299,7 +299,12 @@ hr.widget-divider {
 #fest-tier-two-sponsors, #fest-tier-three-sponsors {
 	margin: 24px 0;
 	text-align: center;
+
+	> div > a > img {
+		margin: 0 0 12px;
+	}
 }
+
 
 /* BANDS */
 .band {

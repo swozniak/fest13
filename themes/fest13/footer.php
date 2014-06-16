@@ -30,9 +30,13 @@
 			  <a target="_blank" href="http://www.fatwreck.com/" title="Fat Wreck Chords"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/fatwreck.png" alt="Fat Wreck Chords" /></a>
 			  <a target="_blank" href="http://www.newnoisemagazine.com/" title="New Noise Magazine"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/newnoise.png" alt="New Noise Magazine" /></a>
 			  <a target="_blank" href="http://www.6131records.com/site" title="6131 Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/6131.png" alt="6131 Records" /></a>
+			  <a target="_blank" href="http://scelsilaw.com/" title="Punk Lawyer Chrissie Scelsi"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/chrissie_scelsi.png" alt="Punk Lawyer Chrissie Scelsi" /></a>
 			  <a target="_blank" href="http://www.jakprints.com/" title="Jakprints"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/jakprints.png" alt="Jakprints" /></a>
 			  <a target="_blank" href="http://www.paperandplastick.com/" title="Paper + Plastick"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/paperplastick.png" alt="Paper + Plastick" /></a>
 			  <a target="_blank" href="http://www.propertyofzack.com/" title="Property of Zack"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/propertyofzack.png" alt="Property of Zack" /></a>
+			  <a target="_blank" href="http://www.runforcoverrecords.com/" title="Run For Cover Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/runforcover.png" alt="Run For Cover Records" /></a>
+			  <a target="_blank" href="http://www.deanmarkley.com/" title="Dean Markley"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/dean_markley.png" alt="Dean Markley" /></a>
+			  <a target="_blank" href="http://www.hopelessrecords.com/" title="Hopeless Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/hopeless.png" alt="Hopeless Records" /></a>
 			</div>
 		</div>
 		<div class="row" id="fest-tier-three-sponsors">
@@ -45,6 +49,12 @@
 			  <a target="_blank" href="http://www.rocketfuelpodcast.com/" title="Rocket Fuel Podcast"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/rocket_fuel.png" alt="Rocket Fuel Podcast" /></a>
 			  <a target="_blank" href="http://www.chunksaah.com/" title="Chunksaah Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/chunksaah.png" alt="Chunksaah Records" /></a>
 			  <a target="_blank" href="http://www.russomusic.com/" title="Russo Music"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/russo.png" alt="Russo Music" /></a>
+			  <a target="_blank" href="http://www.animalstylerecords.com/" title="Animal Style Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/animalstyle.png" alt="Animal Style Records" /></a>
+			  <a target="_blank" href="http://www.sweetwaterorganiccoffee.com/" title="Sweetwater Coffee"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/sweetwater.png" alt="Sweetwater Coffee" /></a>
+			  <a target="_blank" href="http://www.kissofdeathrecords.com/" title="Kiss of Death Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/kiss_of_death.png" alt="Kiss of Death Records" /></a>
+			  <a target="_blank" href="http://riceandbreadmagazine.com/" title="Rice &amp; Bread Magazine"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/ricebread.png" alt="Rice &amp; Bread Magazine" /></a>
+
+
 			</div>
 		</div>
 	</div>

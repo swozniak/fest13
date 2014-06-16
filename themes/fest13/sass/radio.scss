@@ -51,7 +51,9 @@
 	}
 	/* fixing now playing image */
 	.wp-playlist-current-item > img {
-		max-width: 40% !important;
+			max-width: 66px !important;
+			height: 66px !important;
+			width: 66px !important;
 	}
 
 	.wp-playlist-current-item {
@@ -69,14 +71,6 @@
 		overflow-y: scroll;
 		margin-top: 3.75em !important;
 		z-index: 1;
-	}
-
-
-	@media only screen 
-	and (min-width : 960px) {
-		.wp-playlist-current-item > img {
-			max-width: 66px !important;
-		}
 	}
 
 }

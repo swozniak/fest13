@@ -250,7 +250,11 @@ function fest13_wp_playlist_shortcode( $attr ) {
 
 	if ( ! empty( $include ) ) {
 		$args['include'] = $include;
-		$_attachments = get_posts( $args );
+
+		if ( false === ( $_attachments = get_transient( 'fest13_radio_playlist' ) ) ) {
+     		$_attachments = get_posts( $args );
+		    set_transient( 'fest13_radio_playlist', $_attachments );
+		}
 
 		$attachments = array();
 		foreach ( $_attachments as $key => $val ) {
@@ -398,4 +402,12 @@ function fest13_wp_playlist_shortcode( $attr ) {
 remove_shortcode('playlist');
 add_shortcode( 'playlist', 'fest13_wp_playlist_shortcode' );
 
+
+function delete_radio_transient( $post_id ) {
+
+	if ( 'page-radio.php' === get_page_template_slug( $post_id ) ) {
+		delete_transient('fest13_radio_playlist');
+	}
+}
+add_action( 'save_post', 'delete_radio_transient' );
 ?>

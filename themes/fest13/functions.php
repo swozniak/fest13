@@ -15,31 +15,31 @@ add_theme_support( 'post-thumbnails' );
 
 // Add menu support and register main menu
 if ( function_exists( 'register_nav_menus' ) ) {
-  	register_nav_menus(
-  		array(
-  		  'main_menu' => 'Main Menu'
-  		)
-  	);
+	register_nav_menus(
+		array(
+		  'main_menu' => 'Main Menu'
+		)
+	);
 }
 
 if ( function_exists( 'register_sidebar' ) ) {
 	register_sidebar( array(
 		'name' => 'Fest 13 Sidebar: Main',
 		'id' => 'fest13-main',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
-     ) );
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
+	 ) );
 
 	register_sidebar( array(
 		'name' => 'Fest 13 Sidebar: Store',
 		'id' => 'fest13-store',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
-     ) );
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
+	 ) );
 }
 
 function get_attachment_id_from_src( $image_src ) {
@@ -57,15 +57,15 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 			
 		function register_menus(){
 			register_nav_menus(
-			    array(
-			      'fest-nav-1' => __( 'Fest Nav (Top Row)' ),
-			      'fest-nav-2' => __( 'Fest Nav (Bottom Row)' ),
-			      'fest-nav-3' => __( 'Fest Nav (Pre-Fest Link)' ),
-			      'prefest-nav-1' => __( 'Pre-Fest Nav (Top Row)' ),
-			      'prefest-nav-2' => __( 'Pre-Fest Nav (Bottom Row)' ),
-			      'prefest-nav-3' => __( 'Pre-Fest Nav (Fest Link)' ),
-			    )
-		    );
+				array(
+				  'fest-nav-1' => __( 'Fest Nav (Top Row)' ),
+				  'fest-nav-2' => __( 'Fest Nav (Bottom Row)' ),
+				  'fest-nav-3' => __( 'Fest Nav (Pre-Fest Link)' ),
+				  'prefest-nav-1' => __( 'Pre-Fest Nav (Top Row)' ),
+				  'prefest-nav-2' => __( 'Pre-Fest Nav (Bottom Row)' ),
+				  'prefest-nav-3' => __( 'Pre-Fest Nav (Fest Link)' ),
+				)
+			);
 		}
  
 		class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
@@ -250,7 +250,11 @@ function fest13_wp_playlist_shortcode( $attr ) {
 
 	if ( ! empty( $include ) ) {
 		$args['include'] = $include;
-		$_attachments = get_posts( $args );
+
+		if ( false === ( $_attachments = get_transient( 'fest13_radio_playlist' ) ) ) {
+			$_attachments = get_posts( $args );
+			set_transient( 'fest13_radio_playlist', $_attachments, 60*60*24*30 );
+		}
 
 		$attachments = array();
 		foreach ( $_attachments as $key => $val ) {
@@ -297,6 +301,7 @@ function fest13_wp_playlist_shortcode( $attr ) {
 		$url = wp_get_attachment_url( $attachment->ID );
 		$ftype = wp_check_filetype( $url, wp_get_mime_types() );
 		$track = array(
+			'id' => $attachment->ID,
 			'src' => $url,
 			'type' => $ftype['type'],
 			'title' => $attachment->post_title,
@@ -305,7 +310,12 @@ function fest13_wp_playlist_shortcode( $attr ) {
 		);
 
 		$track['meta'] = array();
-		$meta = wp_get_attachment_metadata( $attachment->ID );
+
+		if ( false === ( $meta = get_transient( 'fest13_radio_playlist_track_' . $attachment->ID ) ) ) {
+			$meta = wp_get_attachment_metadata( $attachment->ID );
+			set_transient( 'fest13_radio_playlist_track_' . $attachment->ID, $meta, 60*60*24*30 );
+		}
+
 		if ( ! empty( $meta ) ) {
 
 			foreach ( wp_get_attachment_id3_keys( $attachment ) as $key => $label ) {
@@ -349,9 +359,26 @@ function fest13_wp_playlist_shortcode( $attr ) {
 				$track['thumb'] = compact( 'src', 'width', 'height' );
 			}
 		}
-
 		$tracks[] = $track;
 	}
+
+	usort($tracks, function($a, $b){
+			$list = array(
+				'The ' => ''
+			);
+			$patterns = array();
+			$replacement = array();
+			foreach ( $list as $from => $to ){
+				$from = '/\b' . $from . '\b/';
+				$patterns[] = $from;
+				$replacement[] = $to;
+			}
+
+			$a = preg_replace( $patterns, $replacement, $a['meta']['artist'] );
+			$b = preg_replace( $patterns, $replacement, $b['meta']['artist'] );
+
+			return strcasecmp( $a, $b );
+		});
 	$data['tracks'] = $tracks;
 
 	$safe_type = esc_attr( $type );
@@ -398,4 +425,12 @@ function fest13_wp_playlist_shortcode( $attr ) {
 remove_shortcode('playlist');
 add_shortcode( 'playlist', 'fest13_wp_playlist_shortcode' );
 
+
+function delete_radio_transient( $post_id ) {
+
+	if ( 'page-radio.php' === get_page_template_slug( $post_id ) ) {
+		delete_transient('fest13_radio_playlist');
+	}
+}
+add_action( 'save_post', 'delete_radio_transient' );
 ?>

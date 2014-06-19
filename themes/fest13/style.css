@@ -5653,34 +5653,69 @@ input#video-search {
     width: 60px !important; }
   .radio-content .wp-playlist-current-item {
     position: fixed !important;
-    top: 1em;
+    top: 80px;
     z-index: 5; }
   .radio-content .mejs-container {
     position: fixed !important;
-    top: 6em;
+    top: 154px;
     z-index: 5; }
   .radio-content .wp-playlist-tracks {
     overflow: hidden;
-    margin-top: 86px !important;
+    margin-top: 169px !important;
     z-index: 1; }
 
 /* scrolling tracks */
-.fest13-fixed-scrolling-fix {
+.fest13-radio-fixed-scrolling-fix {
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
   right: 0;
   height: 8em;
   z-index: 3;
-  background: #307f87; }
+  background: #307f87;
+  margin: 0 auto; }
+
+.fest13-radio-fixed-header {
+  background-color: #c76cab;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  max-width: 960px;
+  z-index: 5;
+  margin: 0 auto; }
+
+.fest13-radio-fixed-header-logo {
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .fest13-radio-fixed-header-logo img {
+    width: 50%;
+    margin-top: 6%;
+    margin-left: 5%; }
+
+.fest13-radio-fixed-header-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right; }
+  .fest13-radio-fixed-header-link img {
+    width: 60%;
+    margin-top: 6%;
+    margin-right: 5%; }
 
 @media only screen and (min-width: 960px) {
-  .fest13-fixed-scrolling-fix {
-    max-width: 960px;
-    margin: 0 auto; }
+  .fest13-radio-fixed-scrolling-fix {
+    max-width: 960px; }
 
   .wp-playlist-tracks {
-    margin-top: 7.5em !important; } }
+    margin-top: 7.5em !important; }
+
+  .fest13-radio-fixed-header-logo img,
+  .fest13-radio-fixed-header-link img {
+    width: 100%;
+    margin: inherit; } }
 .page-template-page-templatesstore-php #content #content-column, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product {
   min-height: 930px; }
   .page-template-page-templatesstore-php #content #content-column .onsale, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .onsale, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .onsale {

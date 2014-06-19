@@ -7,6 +7,18 @@
 get_header( 'radio' );
 ?>
 
+<div class="fest13-radio-fixed-header">
+	<div class="fest13-radio-fixed-header-logo">
+		<img src="<?php bloginfo( 'template_directory' ); ?>/img/radio/logo.png" />
+	</div>
+	<div class="fest13-radio-fixed-header-link">
+		<a target="_blank" href="http://thefestfl.com">
+			<img src="<?php bloginfo( 'template_directory' ); ?>/img/radio/link.png" />
+		</a>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+<div class="fest13-radio-fixed-scrolling-fix"></div>
 <div class="col-xs-12 radio-content" id="content-column">
 <?php if ( have_posts() ) : ?>
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -24,5 +36,4 @@ get_header( 'radio' );
 	<?php endwhile; ?>
 <?php endif; ?>
 </div>
-<div class="fest13-fixed-scrolling-fix"></div>
 <?php get_footer( 'radio' ); ?>

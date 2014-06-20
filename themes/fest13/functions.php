@@ -359,7 +359,11 @@ function fest13_wp_playlist_shortcode( $attr ) {
 				$track['thumb'] = compact( 'src', 'width', 'height' );
 			}
 		}
-		$tracks[] = $track;
+
+		/* those m4as don't work, we'll fix those later */
+		if ( strpos( $track['src'], '.mp3' ) !== false ) {
+			$tracks[] = $track;
+		}
 	}
 
 	usort($tracks, function($a, $b){

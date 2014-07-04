@@ -37,6 +37,9 @@
 			  <a target="_blank" href="http://www.runforcoverrecords.com/" title="Run For Cover Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/runforcover.png" alt="Run For Cover Records" /></a>
 			  <a target="_blank" href="http://www.deanmarkley.com/" title="Dean Markley"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/dean_markley.png" alt="Dean Markley" /></a>
 			  <a target="_blank" href="http://www.hopelessrecords.com/" title="Hopeless Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/hopeless.png" alt="Hopeless Records" /></a>
+			  <a target="_blank" href="http://www.epitaph.com/" title="Epitaph Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/epitaph.png" alt="Epitaph Records" /></a>
+			  <a target="_blank" href="http://www.merchline.com/" title="Merchline"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/merchline.png" alt="Merchline" /></a>
+			  <a target="_blank" href="http://www.triplecrownrecords.com/" title="Triple Crown Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_2/triplecrown.png" alt="Triple Crown Records" /></a>
 			</div>
 		</div>
 		<div class="row" id="fest-tier-three-sponsors">
@@ -48,6 +51,7 @@
 			  <a target="_blank" href="http://tinyengines.limitedrun.com/" title="Tiny Engines"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/tinyengines.png" alt="Tiny Engines" /></a>
 			  <a target="_blank" href="http://www.rocketfuelpodcast.com/" title="Rocket Fuel Podcast"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/rocket_fuel.png" alt="Rocket Fuel Podcast" /></a>
 			  <a target="_blank" href="http://www.chunksaah.com/" title="Chunksaah Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/chunksaah.png" alt="Chunksaah Records" /></a>
+			  <a target="_blank" href="http://www.jumpstartrecords.com/" title="Jump Start Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/jumpstart.png" alt="Jump Start Records" /></a>
 			  <a target="_blank" href="http://www.russomusic.com/" title="Russo Music"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/russo.png" alt="Russo Music" /></a>
 			  <a target="_blank" href="http://www.animalstylerecords.com/" title="Animal Style Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/animalstyle.png" alt="Animal Style Records" /></a>
 			  <a target="_blank" href="http://www.sweetwaterorganiccoffee.com/" title="Sweetwater Coffee"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/sweetwater.png" alt="Sweetwater Coffee" /></a>

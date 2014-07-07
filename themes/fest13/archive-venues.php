@@ -4,14 +4,19 @@
  *
  */
 
-get_header();
+$prefest = strpos( $_SERVER['REQUEST_URI'], 'prefest' );
+if ($prefest) {
+	get_header( 'prefest' );
+} else {
+	get_header();
+}
 
 $gainesville_venues = [];
 $tampa_venues = [];
 
 $args = array( 
 		'posts_per_page' => 666,
-		'post_type' => 'venue',
+		'post_type' => 'venues',
 		'order'=> 'ASC',
 		'orderby' => 'title',
 		'post_status' => 'publish' 
@@ -86,11 +91,13 @@ function display_venues( $venues ) {
 
 	if ($prefest) : ?>
 		<?php display_venues( $tampa_venues ); ?>
+	</div>
+	<a href="/venues">Check out the FEST 13 venues!</a>
 	<?php else : ?>
 		<?php display_venues( $gainesville_venues ); ?>
+	</div>
+	<a href="/prefest/venues">Check out the PRE-FEST 2 venues!</a>
 	<?php endif; ?>
-	</div>
-	</div>
 </div>
 
 <?php

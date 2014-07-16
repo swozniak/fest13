@@ -115,7 +115,7 @@ class wp_fest13_flickr_widget extends WP_Widget {
 		$args['format'] = 'json';
 		$args['api_key'] = '41443d38c4e7b8ca70841b903624afa1';
 		$args['nojsoncallback'] = 1;
-		$url = esc_url_raw( add_query_arg( $args, 'http://api.flickr.com/services/rest/' ) );
+		$url = esc_url_raw( add_query_arg( $args, 'https://api.flickr.com/services/rest/' ) );
 
 		$response = wp_remote_get( $url );
 		if ( is_wp_error( $response ) )

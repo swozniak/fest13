@@ -18,11 +18,23 @@ class wp_fest13_upload_ad_widget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		extract( $args );
 		$name = apply_filters( 'widget_name', $instance['name'] );
-		$name = apply_filters( 'widget_link', $instance['link'] );
+		$link = apply_filters( 'widget_link', $instance['link'] );
+
 		$image_uri = apply_filters( 'widget_image_uri', $instance['image_uri'] );
-		echo $before_widget; ?>
+		echo $before_widget; 
+
+		// Display the widget
+		echo '<div class="widget-text wp_widget_plugin_box">';
+
+		// Check if title is set
+		if ( $name ) {
+			echo $before_title . $name . $after_title;
+		}
+		?>
+
+
         	<a target="_blank" href="<?php echo esc_url($instance['link']); ?>"><img class="img-responsive" src="<?php echo esc_url($instance['image_uri']); ?>" /></a>
-        
+        </div>
     <?php
 		echo $after_widget;
 	}
@@ -53,6 +65,12 @@ class wp_fest13_upload_ad_widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
+		if ( isset( $instance['title'] ) ) {
+		     $title = esc_attr( $instance['title'] );
+		} else {
+		     $title = '';
+		}
+
         if ( isset( $instance[ 'image_uri' ] ) ) {
 			$image_uri = $instance[ 'image_uri' ];
 		}

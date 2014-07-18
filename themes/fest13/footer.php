@@ -57,6 +57,7 @@
 			  <a target="_blank" href="http://www.sweetwaterorganiccoffee.com/" title="Sweetwater Coffee"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/sweetwater.png" alt="Sweetwater Coffee" /></a>
 			  <a target="_blank" href="http://www.kissofdeathrecords.com/" title="Kiss of Death Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/kiss_of_death.png" alt="Kiss of Death Records" /></a>
 			  <a target="_blank" href="http://riceandbreadmagazine.com/" title="Rice &amp; Bread Magazine"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/ricebread.png" alt="Rice &amp; Bread Magazine" /></a>
+			  <a target="_blank" href="http://sideonedummy.com/" title="SideOneDummy Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/sideonedummy.png" alt="SideOneDummy Records" /></a>
 			</div>
 		</div>
 	</div>

@@ -76,25 +76,25 @@ foreach ($event_results as $event_id) {
 
 					<?php if ( $custom['wpcf-age-limit'][0] ): ?>
 						<div class="widget">
-							<h5>Age Limit:</h5>
+							<h5>Age Limit</h5>
 							<p><?php echo $custom['wpcf-age-limit'][0]; ?></p>
 						</div>
 					<?php endif;?>
 					<?php if ( $custom['wpcf-capacity'][0] ): ?>
 						<div class="widget">
-							<h5>Capacity:</h5>
+							<h5>Capacity</h5>
 							<p><?php echo $custom['wpcf-capacity'][0]; ?></p>
 						</div>
 					<?php endif;?>
 					<?php if ( $custom['wpcf-stage-size'][0] ): ?>
 						<div class="widget">
-							<h5>Stage Size:</h5>
+							<h5>Stage Size</h5>
 							<p><?php echo $custom['wpcf-stage-size'][0]; ?></p>
 						</div>
 					<?php endif;?>
 					<?php if ( $custom['wpcf-sound-provided'][0] ): ?>
 						<div class="widget">
-							<h5>Sound Provided:</h5>
+							<h5>Sound Provided</h5>
 							<p><?php echo $custom['wpcf-sound-provided'][0]; ?></p>
 						</div>
 					<?php endif;?>
@@ -107,15 +107,15 @@ foreach ($event_results as $event_id) {
 					<?php if ( $custom['wpcf-beer'][0] || $custom['wpcf-wine'][0] || $custom['wpcf-liquor'][0] ): ?>
 						<h4>Drinks</h4>
 						<?php if ( $custom['wpcf-beer'][0] ): ?>
-							<h5>Beer:</h5>
+							<h5>Beer</h5>
 							<p><?php echo $custom['wpcf-beer'][0]; ?></p>
 						<?php endif; ?>
 						<?php if ( $custom['wpcf-wine'][0] ): ?>
-							<h5>Wine:</h5>
+							<h5>Wine</h5>
 							<p><?php echo $custom['wpcf-wine'][0]; ?></p>
 						<?php endif; ?>
 						<?php if ( $custom['wpcf-liquor'][0] ): ?>
-							<h5>Liquor:</h5>
+							<h5>Liquor</h5>
 							<p><?php echo $custom['wpcf-liquor'][0]; ?></p>
 						<?php endif; ?>
 					<?php endif; ?>

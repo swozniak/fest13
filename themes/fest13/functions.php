@@ -13,6 +13,17 @@ include_once( get_stylesheet_directory() . '/functions/videos/fest-videos.php' )
 // Add thumbnail support
 add_theme_support( 'post-thumbnails' );
 
+// get 
+function get_fest13_header() {
+	$prefest = strpos( $_SERVER['REQUEST_URI'], 'prefest' );
+	if ($prefest) {
+		get_header( 'prefest' );
+	} else {
+		get_header();
+	}
+}
+
+
 // Add menu support and register main menu
 if ( function_exists( 'register_nav_menus' ) ) {
 	register_nav_menus(

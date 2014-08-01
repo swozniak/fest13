@@ -5807,10 +5807,6 @@ and (min-width : 960px) {
     width: 100%; }
     .page-template-page-templatesstore-php #content #content-column .woocommerce ul.products, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .woocommerce ul.products, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .woocommerce ul.products {
       text-align: center; }
-      .page-template-page-templatesstore-php #content #content-column .woocommerce ul.products li.product, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .woocommerce ul.products li.product, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .woocommerce ul.products li.product {
-        width: 100%; }
-        .page-template-page-templatesstore-php #content #content-column .woocommerce ul.products li.product a img, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .woocommerce ul.products li.product a img, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .woocommerce ul.products li.product a img {
-          width: auto; }
 
 .woocommerce.widget_shopping_cart ul.cart_list li dl {
   border: none;

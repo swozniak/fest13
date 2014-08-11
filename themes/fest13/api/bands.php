@@ -11,14 +11,16 @@ if ( false === ( get_transient( 'fest13_api_bands' ) ) ) {
 
 	$bands = Array();
 	$bands_query = $wpdb->get_results( "SELECT ID, post_title, post_name, post_content from $wpdb->posts WHERE post_status='publish' AND post_type='bands' ORDER BY post_name ASC", ARRAY_A );
+
 	foreach ( $bands_query as $band_result ) {
 		$band_ID = $band_result['ID'];
 		$band_custom = get_post_custom( $band_ID );
+
 		$band_urls = Array();
 
 		$band = Array( 
 			'id' => $band_ID,
-			'url' => 'http://thefestfl.com/bands/' . $band_result['post_name'] . '/', 
+			'url' => 'https://thefestfl.com/bands/' . $band_result['post_name'] . '/', 
 			'name' => $band_result['post_title'],
 			'bio' => $band_result['post_content'],
 			'bio_text' => wp_strip_all_tags( $band_result['post_content'] ),

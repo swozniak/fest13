@@ -35,7 +35,7 @@ if ( false === ( get_transient( 'fest13_api_venues' ) ) ) {
 		$venue = Array( 
 			'id' => $venue_ID,
 			'name' => $venue_result['post_title'],
-			'url' => 'http://thefestfl.com/venues/' . $venue_result['post_name'] . '/', 
+			'url' => 'https://thefestfl.com/venues/' . $venue_result['post_name'] . '/', 
 			'bio' => $venue_result['post_content'],
 			'bio_text' => wp_strip_all_tags( $venue_result['post_content'] ),
 			'address' => $venue_custom['wpcf-address'][0],

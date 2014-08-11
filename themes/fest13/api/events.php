@@ -36,13 +36,13 @@ function get_fest_date( $fest_day ) {
 
 	switch ( $fest_day ) {
 		case 1:
-			$day = 28;
-			break;
-		case 2:
 			$day = 29;
 			break;
-		case 3:
+		case 2:
 			$day = 30;
+			break;
+		case 3:
+			$day = 31;
 			break;
 		case 4:
 			$month = 11;
@@ -63,14 +63,18 @@ function get_unix_timestamp( $fest_day, $time_string ) {
 	$time_array = explode( ':', $time_string );
 	$hour = $time_array[0];
 	$minute = $time_array[1];
-	$meridiem = strpos( $minute, 'AM' );
+	$ante_meridiem = strpos( $minute, 'AM' );
 
-	if ($meridiem === false) {
-		$hour += 12;
+	if ($ante_meridiem === false) {
+		if ( $hour != 12 ) {
+			$hour += 12;
+		}
 		$minute = str_replace(' PM', '', $minute);
 	} else {
-		if ( $hour == 12 || $hour <= 6 ) { // if up to 6:00 AM, actually assume they mean the next day
+		if ( $hour == 12 ) {
 			$hour += 12;
+		} else if ( $hour <= 6 ) { // if up to 6:00 AM, actually assume they mean the next day) {
+			$hour += 24;
 		}
 		$minute = str_replace(' AM', '', $minute);
 	}
@@ -123,7 +127,6 @@ if ( false === ( get_transient( 'fest13_api_venues' ) ) ) {
 }
 $venues = json_decode( get_transient( 'fest13_api_venues' ), true );
 
-
 if ( false === ( get_transient( 'fest13_api_events' ) ) ) {
 	global $wpdb;
 
@@ -134,7 +137,7 @@ if ( false === ( get_transient( 'fest13_api_events' ) ) ) {
 		$event_ID = $event_result['ID'];
 		$event_custom = get_post_custom( $event_ID );
 
-		$venue_sched_nickname_ID = $event_custom['_wpcf_belongs_venue-name-for-sched_id'][0];
+		$venue_sched_nickname_ID = $event_custom['_wpcf_belongs_venue-for-schedule_id'][0];
 		$venue_sched_nickname_post = get_post( $venue_sched_nickname_ID, ARRAY_A );
 		$venue_sched_nickname_custom = get_post_custom( $venue_sched_nickname_ID );
 		$venue_ID = $venue_sched_nickname_custom['_wpcf_belongs_venues_id'][0];
@@ -170,7 +173,7 @@ if ( false === ( get_transient( 'fest13_api_events' ) ) ) {
 
 		$events[$event_ID] = $event;
 	}
-	set_transient( 'fest13_api_events', json_encode( $events ), 60*60*24*30 );
+	set_transient( 'fest13_api_events', json_encode( array_values( $events ) ), 60*60*24*30 );
 	echo json_encode( $events );
 } else {
 	$events = get_transient( 'fest13_api_events' );

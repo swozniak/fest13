@@ -16,13 +16,39 @@ add_theme_support( 'post-thumbnails' );
 // get 
 function get_fest13_header() {
 	$prefest = strpos( $_SERVER['REQUEST_URI'], 'prefest' );
-	if ($prefest) {
+	if ( $prefest ) {
 		get_header( 'prefest' );
 	} else {
 		get_header();
 	}
 }
 
+function is_prefest() {
+	return strpos( $_SERVER['REQUEST_URI'], 'prefest' );
+}
+
+function dequeue_woocommerce_assets() {
+	wp_dequeue_style( 'woocommerce_frontend_styles' );
+	wp_dequeue_style( 'woocommerce_fancybox_styles' );
+	wp_dequeue_style( 'woocommerce_chosen_styles' );
+	wp_dequeue_style( 'woocommerce_prettyPhoto_css' );
+	wp_dequeue_script( 'wc_price_slider' );
+	wp_dequeue_script( 'wc-single-product' );
+	wp_dequeue_script( 'wc-add-to-cart' );
+	wp_dequeue_script( 'wc-cart-fragments' );
+	wp_dequeue_script( 'wc-checkout' );
+	wp_dequeue_script( 'wc-add-to-cart-variation' );
+	wp_dequeue_script( 'wc-single-product' );
+	wp_dequeue_script( 'wc-cart' );
+	wp_dequeue_script( 'wc-chosen' );
+	wp_dequeue_script( 'woocommerce' );
+	wp_dequeue_script( 'prettyPhoto' );
+	wp_dequeue_script( 'prettyPhoto-init' );
+	wp_dequeue_script( 'jquery-blockui' );
+	wp_dequeue_script( 'jquery-placeholder' );
+	wp_dequeue_script( 'fancybox' );
+	wp_dequeue_script( 'jqueryui' );
+}
 
 // Add menu support and register main menu
 if ( function_exists( 'register_nav_menus' ) ) {
@@ -442,7 +468,6 @@ add_shortcode( 'playlist', 'fest13_wp_playlist_shortcode' );
 
 
 function delete_radio_transient( $post_id ) {
-
 	if ( 'page-radio.php' === get_page_template_slug( $post_id ) ) {
 		delete_transient('fest13_radio_playlist');
 	}

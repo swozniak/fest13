@@ -5545,6 +5545,50 @@ input#band-search {
   height: auto;
   max-width: 100%; }
 
+.col-sm-offset-2 {
+  margin-left: 16.666666666666664% !important; }
+
+.col-sm-offset-1 {
+  margin-left: 8.333333333333332% !important; }
+
+.schedule-date-label {
+  display: inline-block;
+  background-color: #0c1f21;
+  padding: 8px 12px;
+  margin-right: 8px;
+  cursor: default;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px; }
+
+.schedule-venue-nickname {
+  display: inline-block;
+  background-color: #0c1f21;
+  padding: 8px 12px;
+  margin-right: 8px;
+  cursor: default;
+  color: #ede33d;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px; }
+
+.schedule-venue-address {
+  display: inline-block;
+  background-color: #0c1f21;
+  padding: 8px 12px;
+  margin-top: -12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  cursor: default; }
+
+.schedule-venue-container {
+  background-color: #3ea9b3;
+  margin: 1em; }
+
 /* VENUES PAGE */
 .venue {
   margin-bottom: 16px; }

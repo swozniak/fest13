@@ -32,33 +32,6 @@ if ( $prefest ) {
 			<?php $address = $custom['wpcf-address'][0] . ', ' . $custom['wpcf-city'][0] . ', FL'; ?>
 			<h5 class="hometown"><?php echo $address ?></h5>
 			<?php echo the_content(); ?>
-			<br /><br />
-
-			<?php
-			/*
-			if ( $prefest ) {
-				echo '<h3 class="hometown">Pre-FEST Schedule</h3>';
-			} else {
-				echo '<h3 class="hometown">FEST Schedule</h3>';
-			}
-
-			global $wpdb;
-			$venue_id = $post->ID;
-			$event_results = $wpdb->get_results( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = '_wpcf_belongs_venues_id' AND meta_value = $venue_id ORDER BY meta_value ASC", OBJECT );
-			foreach ($event_results as $event_id) {
-				$event = get_post( $event_id->post_id );
-				$event_custom = get_post_custom( $event_id->post_id );
-
-				$band_id = $event_custom['_wpcf_belongs_bands_id'][0];
-				$band_name = '';
-				$band_results = $wpdb->get_results( "SELECT post_title FROM $wpdb->posts WHERE ID = $band_id", OBJECT );
-				$band_name = $band_results[0]->post_title;
-				echo $band_name . $event_custom['wpcf-memo'][0];
-				echo '<br />';
-			} 
-			*/ 
-			?>
-		
 		</div>
 
 		<div class="col-xs-12 col-md-4 venue-sidebar" id="sidebar-column">

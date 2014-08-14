@@ -74,6 +74,19 @@ foreach ( $events_array as $event ) {
 		<?php endif; ?>
 	</div>
 
+	<div class="schedule-links" style="float:right;display:block;">
+		<?php
+			$sort_button_url = $protocol . $_SERVER['HTTP_HOST'] . '/' . strtok( $_SERVER['REQUEST_URI'], '?' );
+		?>
+		<button>
+		<?php if ( $sort_method !== 'time' ) : ?>
+			<a href="<?php echo $sort_button_url; ?>?sort=time" style="color: #0c1f21; text-decoration: none">Sort by Time</a>
+		<?php else : ?>
+			<a href="<?php echo $sort_button_url; ?>" style="color: #0c1f21; text-decoration: none">Sort by Venue</a>
+		<?php endif; ?>
+		</button>
+	</div>
+
 	<div class="entry-content">
 	<?php foreach ( $schedule_days as $day ) : ?>
 		<div class="col-xs-12">
@@ -93,7 +106,7 @@ foreach ( $events_array as $event ) {
 						<div class="col-xs-12 col-xs-offset-0 col-sm-5 col-sm-offset-1 schedule-venue-container">
 					<?php endif; ?>
 						<h2 class="schedule-venue-nickname"><?php echo $venue['nickname']; ?></h2><br />
-						<h3 class="schedule-venue-address"><?php echo $venue_info['address']; ?></h3>
+						<h3 class="schedule-venue-address"><?php echo $venue_info['address']; ?>, <?php echo $venue_info['city']; ?>, FL</h3>
 						<?php usort( $venue['events'], 'time_sort' ); ?>
 
 						<table>
@@ -205,6 +218,12 @@ foreach ( $events_array as $event ) {
 			<?php endif; ?>
 		</div>
 	<?php endforeach; ?>
+
+	<?php if ( is_prefest() ) : ?>
+		<a href="/schedule">View the FEST 13 schedule!</a>
+	<?php else : ?>
+		<a href="/prefest/schedule">View the PRE-FEST 2 schedule!</a>
+	<?php endif; ?>
 	</div><!-- .entry-content -->
 </div>
 

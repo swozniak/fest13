@@ -13,26 +13,15 @@ function time_sort( $a, $b ) {
 }
 
 function get_date_label( $day ) {
-	switch ( $day ) {
-	case 1: 
-		$label = 'Wednesday October 29th';
-		break;	
-	case 2: 
-		$label = 'Thursday October 30th';
-		break;
-	case 3: 
-		$label = 'Friday October 31st';
-		break;
-	case 4: 
-		$label = 'Saturday November 1st';
-		break;
-	case 5: 
-		$label = 'Sunday November 2nd';
-		break;
-	default:
-		$label = '';
-		break;
-	}
+	$label = '';
+
+	$day_labels[1] = 'Wednesday October 29th';
+	$day_labels[2] = 'Thursday October 30th';
+	$day_labels[3] = 'Friday October 31st';
+	$day_labels[4] = 'Saturday November 1st';
+	$day_labels[5] = 'Sunday November 2nd';
+
+	$label = $day_labels[$day];
 	return $label;
 }
 

@@ -135,8 +135,14 @@ foreach ( $events_array as $event ) {
 						</table>
 						<hr />
 						<?php 
-						$notes = $venue_meta[implode( '-', array( 'wpcf-venue-day',  $day, 'notes' ) )][0];
-						echo $notes . '<br /><br />';
+						if ( isset( $venue_meta['wpcf-age-limit'][0] ) ) {
+							echo 'Age Limit: ' . $venue_meta['wpcf-age-limit'][0] . '<br />';
+						}
+
+						if ( isset( $venue_meta[implode( '-', array( 'wpcf-venue-day',  $day, 'notes' ) )][0] ) ) {
+							$notes = $venue_meta[implode( '-', array( 'wpcf-venue-day',  $day, 'notes' ) )][0];
+							echo $notes . '<br /><br />';
+						}
 						?>
 					</div>
 
@@ -208,11 +214,13 @@ foreach ( $events_array as $event ) {
 		</div>
 	<?php endforeach; ?>
 
-	<?php if ( is_prefest() ) : ?>
-		<a href="/schedule">View the FEST 13 schedule!</a>
-	<?php else : ?>
-		<a href="/prefest/schedule">View the PRE-FEST 2 schedule!</a>
-	<?php endif; ?>
+		<div class="other-schedule-links">
+		<?php if ( is_prefest() ) : ?>
+			<a href="/schedule">View the FEST 13 schedule!</a>
+		<?php else : ?>
+			<a href="/prefest/schedule">View the PRE-FEST 2 schedule!</a>
+		<?php endif; ?>
+		</div>
 	</div><!-- .entry-content -->
 </div>
 

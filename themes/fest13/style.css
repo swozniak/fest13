@@ -5546,8 +5546,8 @@ input#band-search {
   max-width: 100%; }
 
 .schedule-links {
-  float: right;
-  display: block; }
+  text-align: right;
+  width: 100%; }
 
 .button-link {
   color: #0c1f21 !important;
@@ -5563,6 +5563,9 @@ input#band-search {
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
   font-size: 28px; }
+
+.other-schedule-links {
+  margin: 16px 0; }
 
 .schedule-venue-nickname {
   display: inline-block;
@@ -5594,7 +5597,17 @@ input#band-search {
 .table-time-sort {
   width: 100%; }
   .table-time-sort thead td {
-    width: 33%; }
+    width: 33%;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px; }
+  .table-time-sort tbody tr:nth-child(odd) {
+    background-color: #2B7279; }
+  .table-time-sort tbody tr:nth-child(even) {
+    background-color: #24575C; }
+  .table-time-sort tbody td {
+    font-size: 14px;
+    padding: 8px; }
 
 @media only screen and (min-width: 960px) {
   .col-sm-offset-2 {
@@ -5602,12 +5615,17 @@ input#band-search {
 
   .col-sm-offset-1 {
     margin-left: 8.333333333333332% !important; } }
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 600px) {
   #content-column, .single-product.woocommerce #content div.product {
-    padding: 12px 0 16px; }
+    padding: 12px 4px 16px; }
 
   .schedule-venue-container {
     margin: 1em 0; } }
+@media only screen and (max-width: 600px) {
+  .table-time-sort thead td {
+    font-size: 14px; }
+  .table-time-sort tbody td {
+    font-size: 12px; } }
 /* VENUES PAGE */
 .venue {
   margin-bottom: 16px; }

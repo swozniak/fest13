@@ -63,15 +63,15 @@ foreach ( $events_array as $event ) {
 		<?php endif; ?>
 	</div>
 
-	<div class="schedule-links" style="float:right;display:block;">
+	<div class="schedule-links">
 		<?php
 			$sort_button_url = $protocol . $_SERVER['HTTP_HOST'] . '/' . strtok( $_SERVER['REQUEST_URI'], '?' );
 		?>
 		<button>
 		<?php if ( $sort_method !== 'time' ) : ?>
-			<a href="<?php echo $sort_button_url; ?>?sort=time" style="color: #0c1f21; text-decoration: none">Sort by Time</a>
+			<a href="<?php echo $sort_button_url; ?>?sort=time" class="button-link">Sort by Time</a>
 		<?php else : ?>
-			<a href="<?php echo $sort_button_url; ?>" style="color: #0c1f21; text-decoration: none">Sort by Venue</a>
+			<a href="<?php echo $sort_button_url; ?>" class="button-link">Sort by Venue</a>
 		<?php endif; ?>
 		</button>
 	</div>
@@ -149,7 +149,7 @@ foreach ( $events_array as $event ) {
 				<?php endforeach; ?>
 			<?php else: ?>
 				<?php usort( $schedule_events[$day]['events'], 'time_sort' ); ?>
-				<table style="width:100%">
+				<table class="table-time-sort">
 					<thead>
 						<td style="width:33%">Time</td>
 						<td style="width:33%">Band</td>

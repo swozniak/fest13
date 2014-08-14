@@ -5545,11 +5545,13 @@ input#band-search {
   height: auto;
   max-width: 100%; }
 
-.col-sm-offset-2 {
-  margin-left: 16.666666666666664% !important; }
+.schedule-links {
+  float: right;
+  display: block; }
 
-.col-sm-offset-1 {
-  margin-left: 8.333333333333332% !important; }
+.button-link {
+  color: #0c1f21 !important;
+  text-decoration: none !important; }
 
 .schedule-date-label {
   display: inline-block;
@@ -5589,6 +5591,23 @@ input#band-search {
   background-color: #3ea9b3;
   margin: 1em; }
 
+.table-time-sort {
+  width: 100%; }
+  .table-time-sort thead td {
+    width: 33%; }
+
+@media only screen and (min-width: 960px) {
+  .col-sm-offset-2 {
+    margin-left: 16.666666666666664% !important; }
+
+  .col-sm-offset-1 {
+    margin-left: 8.333333333333332% !important; } }
+@media only screen and (max-width: 959px) {
+  #content-column, .single-product.woocommerce #content div.product {
+    padding: 12px 0 16px; }
+
+  .schedule-venue-container {
+    margin: 1em 0; } }
 /* VENUES PAGE */
 .venue {
   margin-bottom: 16px; }

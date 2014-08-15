@@ -2,8 +2,10 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "site.scss";
-@import "videos.scss";
-@import "radio.scss";
+@import "site/schedule.scss";
+@import "site/venues.scss";
+@import "site/videos.scss";
+@import "site/radio.scss";
 @import "store.scss";
 @import "store-sidebar.scss";
 @import "product.scss";

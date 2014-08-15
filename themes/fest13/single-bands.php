@@ -13,6 +13,7 @@ if ( !is_user_logged_in() && !$playing_prefest && !$playing_fest ) {
 } else {
 	get_header();
 }
+
 ?>
 <?php if ( have_posts() ) : ?>
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -53,6 +54,31 @@ if ( !is_user_logged_in() && !$playing_prefest && !$playing_fest ) {
 
 		<div class="col-xs-12 col-md-4 band-sidebar" id="sidebar-column">
 			<div class="widget-area">
+				<div class="widget">
+					<h4>FEST Shows</h4>
+					<br />
+
+<?php 
+global $wpdb;
+$band_id = $post->ID;
+$event_results = $wpdb->get_results( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = '_wpcf_belongs_bands_id' AND meta_value = $band_id ORDER BY meta_value ASC", OBJECT );
+foreach ($event_results as $event_id) {
+	$event = get_post( $event_id->post_id );
+	$event_custom = get_post_custom( $event_id->post_id );
+	$venue_object = $wpdb->get_results( "SELECT meta_value FROM $wpdb->postmeta WHERE meta_key = '_wpcf_belongs_venues_id' AND post_id = $event_id->post_id ORDER BY meta_value ASC", OBJECT );
+
+	foreach ($venue_object as $venue_id) {
+		$venue = get_post( $venue_id->meta_value );
+		$venue_custom = get_post_custom( $venue_id->meta_value );
+	}
+	
+	echo $venue->{'post_title'};
+	echo '<br />';
+	echo $event_custom['wpcf-time-test'][0];
+} 
+?>
+				</div>
+				<hr class="widget-divider" />
 			<?php if ( $playing_prefest ) : ?>
 				<div class="widget">
 					<img class="img-responsive" src="<?php bloginfo( 'template_directory' ); ?>/img/prefest_sticker.png" />

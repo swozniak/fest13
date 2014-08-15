@@ -6,10 +6,10 @@
 			$sidebar = $('#sidebar-column');
 
 		if ($(window).width() >= 990) {
-			if ($content.height() > $sidebar.height()) {
-				$sidebar.height($content.height() + parseInt($content.css('paddingTop'), 10) + parseInt($content.css('paddingBottom'), 10));
-			} else if ($sidebar.height() > $content.height()) {
-				$content.height($sidebar.height() - parseInt($content.css('paddingTop'), 10) - parseInt($content.css('paddingBottom'), 10));
+			if ($content.outerHeight() > $sidebar.outerHeight()) {
+				$sidebar.height($content.outerHeight() - parseInt($sidebar.css('paddingTop'), 10) - parseInt($sidebar.css('paddingBottom'), 10));
+			} else if ($sidebar.outerHeight() > $content.outerHeight()) {
+				$content.height($sidebar.outerHeight() - parseInt($content.css('paddingTop'), 10) - parseInt($content.css('paddingBottom'), 10));
 			}
 		}
 	}

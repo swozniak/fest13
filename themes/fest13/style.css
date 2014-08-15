@@ -5873,6 +5873,8 @@ input#video-search {
   .radio-content .wp-playlist-item-artist,
   .radio-content .wp-playlist-item-caption {
     font-size: 14px !important; } }
+.page-template-page-templatesstore-php .content-container {
+  background-color: #307f87; }
 .page-template-page-templatesstore-php #content #content-column, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product {
   min-height: 930px; }
   .page-template-page-templatesstore-php #content #content-column .onsale, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .onsale, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .onsale {
@@ -5948,6 +5950,23 @@ input#video-search {
       text-align: center; }
       .page-template-page-templatesstore-php #content #content-column .woocommerce ul.products li.product, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .woocommerce ul.products li.product, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .woocommerce ul.products li.product {
         width: 100%; }
+        .page-template-page-templatesstore-php #content #content-column .woocommerce ul.products li.product img.wp-post-image, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .woocommerce ul.products li.product img.wp-post-image, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .woocommerce ul.products li.product img.wp-post-image {
+          display: none; }
+  .page-template-page-templatesstore-php #content #content-column .single-day-tickets .single-day-ticket, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .single-day-tickets .single-day-ticket, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .single-day-tickets .single-day-ticket {
+    color: white;
+    padding-top: 20px;
+    border-bottom: 1px solid white; }
+    .page-template-page-templatesstore-php #content #content-column .single-day-tickets .single-day-ticket .ticket-thumbnail, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .single-day-tickets .single-day-ticket .ticket-thumbnail, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .single-day-tickets .single-day-ticket .ticket-thumbnail {
+      text-align: center; }
+    .page-template-page-templatesstore-php #content #content-column .single-day-tickets .single-day-ticket .content, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .single-day-tickets .single-day-ticket .content, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .single-day-tickets .single-day-ticket .content {
+      margin: 10px auto;
+      width: 360px; }
+      .page-template-page-templatesstore-php #content #content-column .single-day-tickets .single-day-ticket .content > div > div > ul, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .single-day-tickets .single-day-ticket .content > div > div > ul, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .single-day-tickets .single-day-ticket .content > div > div > ul {
+        list-style-type: none; }
+    .page-template-page-templatesstore-php #content #content-column .single-day-tickets .single-day-ticket .woocommerce, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .single-day-tickets .single-day-ticket .woocommerce, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .single-day-tickets .single-day-ticket .woocommerce {
+      margin-top: 10px; }
+      .page-template-page-templatesstore-php #content #content-column .single-day-tickets .single-day-ticket .woocommerce ul, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .single-day-tickets .single-day-ticket .woocommerce ul, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .single-day-tickets .single-day-ticket .woocommerce ul {
+        margin: 0; }
 
 .woocommerce.widget_shopping_cart ul.cart_list li dl {
   border: none;

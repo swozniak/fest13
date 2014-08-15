@@ -5980,6 +5980,8 @@ input#video-search {
   width: 100%;
   color: #ede33d; }
 
+.single-product .content-container {
+  background-color: #307f87; }
 .single-product.woocommerce #content h1 {
   font-size: 25px; }
 .single-product.woocommerce #content .onsale {

@@ -1,4 +1,7 @@
 .single-product {
+	.content-container {
+		background-color: $green;
+	}
 	&.woocommerce {
 		#content {
 			h1 {

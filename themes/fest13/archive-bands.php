@@ -4,7 +4,7 @@
  *
  */
 
-get_header();
+get_fest13_header();
 
 function no_articles_allowed( $a, $b ) {
     $list = array(

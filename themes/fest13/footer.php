@@ -62,13 +62,13 @@
 		</div>
 	</div>
 
+	<?php 
+		wp_enqueue_script( 'jquery', '/wp-includes/js/jquery/jquery.js' );
+		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' );
+		wp_enqueue_script( 'custom',  get_template_directory_uri() . '/js/custom.js' );
+		wp_enqueue_script( 'jquery.unveil',  get_template_directory_uri() . '/js/lib/jquery.unveil.js' );
+		wp_enqueue_script( 'bands',  get_template_directory_uri() . '/js/bands.js' );
+	?>
 	<?php wp_footer(); ?>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	
-	<script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/custom.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/lib/jquery.unveil.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/bands.js"></script>
 </body>
 </html>

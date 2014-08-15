@@ -59,7 +59,7 @@ class wp_fest13_featured_vimeo_widget extends WP_Widget {
 		if ( $vimeoID ) {
 			$embedUrl = '//player.vimeo.com/video/' . $vimeoID . '?title=0&byline=0&portrait=0';
 			echo '<div>	
-			    	<iframe width="290" height="218" frameborder="0" src="' . $embedUrl . 'webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' .
+			    	<iframe width="290" height="218" frameborder="0" src="' . $embedUrl . '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' .
 				'</div>';
 		}
 		echo '</div>';

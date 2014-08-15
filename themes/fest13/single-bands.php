@@ -54,12 +54,12 @@ if ( !is_user_logged_in() && !$playing_prefest && !$playing_fest ) {
 
 		<div class="col-xs-12 col-md-4 band-sidebar" id="sidebar-column">
 			<div class="widget-area">
-				<div class="widget">
+				<!-- <div class="widget">
 					<h4>FEST Shows</h4>
 					<br />
-
+-->
 <?php 
-global $wpdb;
+/* global $wpdb;
 $band_id = $post->ID;
 $event_results = $wpdb->get_results( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = '_wpcf_belongs_bands_id' AND meta_value = $band_id ORDER BY meta_value ASC", OBJECT );
 foreach ($event_results as $event_id) {
@@ -75,10 +75,10 @@ foreach ($event_results as $event_id) {
 	echo $venue->{'post_title'};
 	echo '<br />';
 	echo $event_custom['wpcf-time-test'][0];
-} 
+} */
 ?>
-				</div>
-				<hr class="widget-divider" />
+				<!--</div>
+				<hr class="widget-divider" />-->
 			<?php if ( $playing_prefest ) : ?>
 				<div class="widget">
 					<img class="img-responsive" src="<?php bloginfo( 'template_directory' ); ?>/img/prefest_sticker.png" />

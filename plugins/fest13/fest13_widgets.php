@@ -9,6 +9,7 @@ License: GPL2
 
 require_once('widgets/featured_band.php');
 require_once('widgets/featured_video.php');
+require_once('widgets/featured_vimeo.php');
 require_once('widgets/social_media.php');
 require_once('widgets/upload-ad.php');
 require_once('widgets/flickr.php');
@@ -18,6 +19,7 @@ require_once('widgets/divider.php');
 add_action( 'widgets_init', 'unregister_default_widgets' );
 add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_featured_band_widget" );' ) );
 add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_featured_video_widget" );' ) );
+add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_featured_vimeo_widget" );' ) );
 add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_social_media_widget" );' ) );
 add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_upload_ad_widget" );' ) );
 add_action( 'widgets_init', create_function( '', 'return register_widget( "wp_fest13_flickr_widget" );' ) );

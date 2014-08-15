@@ -1,4 +1,8 @@
 .page-template-page-templatesstore-php {
+
+	.content-container {
+		background-color: $green;
+	}
 	#content {
 		#content-column {
 			min-height: 930px;
@@ -64,6 +68,40 @@
 
 					li.product {
 						width: 100%;
+
+						img.wp-post-image {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.single-day-tickets {
+
+				.single-day-ticket {
+					color: $white;
+					padding-top: 20px;
+					border-bottom: 1px solid $white;
+
+					.ticket-thumbnail {
+						text-align: center;
+					}
+
+					.content {
+						margin: 10px auto;
+						width: 360px;
+
+						> div > div > ul {
+							list-style-type: none;
+						}
+					}
+
+					.woocommerce {
+						margin-top: 10px;
+
+						ul {
+							margin: 0;
+						}
 					}
 				}
 			}

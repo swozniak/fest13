@@ -27,11 +27,11 @@ function get_date_label( $day ) {
 
 $protocol = ( !empty( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
 
-$venues_url = $protocol . $_SERVER['HTTP_HOST'] . '/api/v1/venues';
+$venues_url = $protocol . $_SERVER['HTTP_HOST'] . '/api/v1/venues?ts=' . time();
 $venues_response = file_get_contents( $venues_url );
 $venues_array = json_decode( $venues_response, true );
 
-$events_url = $protocol . $_SERVER['HTTP_HOST'] . '/api/v1/events';
+$events_url = $protocol . $_SERVER['HTTP_HOST'] . '/api/v1/events?ts=' . time();
 $events_response = file_get_contents( $events_url );
 $events_array = json_decode( $events_response, true );
 

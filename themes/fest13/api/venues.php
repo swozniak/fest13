@@ -65,9 +65,13 @@ if ( false === ( get_transient( 'fest13_api_venues' ) ) ) {
 		$venues[$venue_ID] = $venue;
 	}
 	set_transient( 'fest13_api_venues', json_encode( $venues ), 60*60*24*30 );
+
+	ob_clean();
 	echo json_encode( $venues );
 } else {
 	$venues = get_transient( 'fest13_api_venues' );
+	
+	ob_clean();
 	echo $venues;
 }
 ?>

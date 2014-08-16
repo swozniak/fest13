@@ -173,10 +173,14 @@ if ( false === ( get_transient( 'fest13_api_events' ) ) ) {
 
 		$events[$event_ID] = $event;
 	}
-	set_transient( 'fest13_api_events', json_encode( array_values( $events ) ), 60*60*24*30 );
+	set_transient( 'fest13_api_events', json_encode( $events ), 60*60*24*30 );	
+
+	ob_clean();
 	echo json_encode( $events );
 } else {
 	$events = get_transient( 'fest13_api_events' );
+	
+	ob_clean();
 	echo $events;
 }
 ?>

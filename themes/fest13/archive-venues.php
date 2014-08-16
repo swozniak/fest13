@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Fest 13 - Coming Soon
+ * Template Name: Fest 13 - Venues (Archive)
  *
  */
 

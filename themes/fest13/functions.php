@@ -473,4 +473,51 @@ function delete_radio_transient( $post_id ) {
 	}
 }
 add_action( 'save_post', 'delete_radio_transient' );
+
+
+/*
+ * api / transient helpers
+ */
+function fest13_transient_handlers( $post_id ) {
+	switch ( get_post_type( $post_id ) ) {
+	case 'bands':
+		delete_transient( 'fest13_api_bands' );
+		delete_transient( 'fest13_api_events' );
+
+		set_transient( 'fest13_api_bands_updated', time(), 60*60*24*30*6 );
+		break;
+	case 'venues':
+		delete_transient( 'fest13_api_venues' );
+
+		set_transient( 'fest13_api_venues_updated', time(), 60*60*24*30*6 );
+		break;
+	case 'venue-for-schedule':
+		delete_transient( 'fest13_api_events' );
+
+		set_transient( 'fest13_api_venues_updated', time(), 60*60*24*30*6 );
+		break;
+	case 'events':
+		delete_transient( 'fest13_api_events' );
+
+		set_transient( 'fest13_api_events_updated', time(), 60*60*24*30*6 );
+		break;
+	}
+}
+
+function remove_band_events( $post_id ) {
+	global $wpdb;
+
+	if ( get_post_type( $post_id ) === 'bands' ) {
+		$related_events_query = $wpdb->get_results( "SELECT * from $wpdb->postmeta WHERE meta_key='_wpcf_belongs_bands_id' AND meta_value='$post_id'", ARRAY_A );
+
+		foreach ( $related_events_query as $related_event ) {
+			wp_delete_post( $related_event['post_id'] );
+		}
+	}
+}
+
+add_action( 'save_post', 'fest13_transient_handlers' );
+add_action( 'delete_post', 'fest13_transient_handlers' );
+add_action( 'delete_post', 'remove_band_events' );
+add_action( 'trashed_post', 'remove_band_events' );
 ?>

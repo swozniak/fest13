@@ -42,9 +42,13 @@ if ( false === ( get_transient( 'fest13_api_bands' ) ) ) {
 		$bands[$band_ID] = $band;
 	}
 	set_transient( 'fest13_api_bands', json_encode( $bands ), 60*60*24*30 );
+
+	ob_clean();
 	echo json_encode( $bands );
 } else {
 	$bands = get_transient( 'fest13_api_bands' );
+
+	ob_clean();
 	echo $bands;
 }
 ?>

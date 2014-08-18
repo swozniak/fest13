@@ -14,7 +14,8 @@
 
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.ico" />
 
-	<link href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" rel="stylesheet" media="screen, projection" />
+	<!-- <link href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" rel="stylesheet" media="screen, projection" />-->
+	<link href="//thefestfl.com/wp-content/themes/fest13/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
 
 	<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>"/>
 	<meta property="og:title" content="<?php echo $title; ?>" />

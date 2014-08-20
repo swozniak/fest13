@@ -38,7 +38,7 @@
 
 	<link href='//fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
 
-
+	<script type="text/javascript">var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';</script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -54,6 +54,7 @@
  
 	  <body <?php body_class(); ?>>
 	<div class="container">
+	<?php if( !is_page( 'lookup' ) ) : ?>
 	  <header>
 		<div class="row" id="fest-tier-one-sponsors">
 		  <a target="_blank" href="http://www.bandsonabudget.com/" title="Bands on a Budget"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/boab.png" alt="Bands on a Budget" /></a>
@@ -90,6 +91,7 @@
 		  </div>
 		</nav>
 	  </header>
+<?php endif; ?>
 
 	  <div class="content-container">
 		<div class="row" id="content">

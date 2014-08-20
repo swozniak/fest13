@@ -8,6 +8,8 @@
 ?>
 			</div>
 		</div>
+
+	<?php if( !is_page( 'lookup' ) ) : ?>
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="row" id="fest-footer">
 				<div class="col-xs-12 col-sm-6 col-md-6 social-media">
@@ -61,6 +63,7 @@
 			</div>
 		</div>
 	</div>
+<?php endif; ?>
 
 	<?php 
 		wp_enqueue_script( 'jquery', '/wp-includes/js/jquery/jquery.js' );
@@ -68,6 +71,7 @@
 		wp_enqueue_script( 'custom',  get_template_directory_uri() . '/js/custom.js' );
 		wp_enqueue_script( 'jquery.unveil',  get_template_directory_uri() . '/js/lib/jquery.unveil.js' );
 		wp_enqueue_script( 'bands',  get_template_directory_uri() . '/js/bands.js' );
+		wp_enqueue_script( 'lookup',  get_template_directory_uri() . '/js/lookup.js' );
 	?>
 	<?php wp_footer(); ?>
 </body>

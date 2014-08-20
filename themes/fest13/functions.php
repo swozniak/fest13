@@ -2,12 +2,13 @@
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
+show_admin_bar( false );
 
 include_once( get_stylesheet_directory() . '/functions/products.php' );
 include_once( get_stylesheet_directory() . '/functions/add-fee.php' );
 include_once( get_stylesheet_directory() . '/functions/store.php' );
 include_once( get_stylesheet_directory() . '/functions/checkout.php' );
-
+include_once( get_stylesheet_directory() . '/functions/lookup.php' );
 include_once( get_stylesheet_directory() . '/functions/videos/fest-videos.php' );
 
 // Add thumbnail support

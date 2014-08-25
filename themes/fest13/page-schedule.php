@@ -153,6 +153,10 @@ foreach ( $events_array as $event ) {
 						$count = 1;
 					} ?>
 				<?php endforeach; ?>
+				
+				<?php if ( $count == 1 ) {
+					echo '</div>';
+				} ?>
 			<?php else: ?>
 				<?php usort( $schedule_events[$day]['events'], 'time_sort' ); ?>
 				<table class="table-time-sort">

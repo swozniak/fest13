@@ -58,6 +58,9 @@
 			  <a target="_blank" href="http://www.kissofdeathrecords.com/" title="Kiss of Death Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/kiss_of_death.png" alt="Kiss of Death Records" /></a>
 			  <a target="_blank" href="http://riceandbreadmagazine.com/" title="Rice &amp; Bread Magazine"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/ricebread.png" alt="Rice &amp; Bread Magazine" /></a>
 			  <a target="_blank" href="http://sideonedummy.com/" title="SideOneDummy Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/sideonedummy.png" alt="SideOneDummy Records" /></a>
+			  <a target="_blank" href="http://swamphead.com/" title="Swamp Head Brewery"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/swamphead.png" alt="Swamp Head Brewery" /></a>
+			  <a target="_blank" href="http://www.thebricksybor.com/" title="The Bricks"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/thebricks.png" alt="The Bricks" /></a>
+			  <a target="_blank" href="http://www.skateparkoftampa.com/" title="Skate Park of Tampa"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/spot.png" alt="Skate Park of Tampa" /></a>
 			</div>
 		</div>
 	</div>

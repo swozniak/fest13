@@ -18,6 +18,17 @@ if ( false === ( get_transient( 'fest13_api_bands' ) ) ) {
 
 		$band_urls = Array();
 
+		$mp3_url = $band_custom['wpcf-mp3'][0];
+		$photo_url = $band_custom['wpcf-photo'][0];
+
+		$query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$photo_url'";
+		$photo_id = $wpdb->get_var( $query );
+		$photo_object = wp_get_attachment_image_src( $photo_id, 'medium' );
+		$photo_url = $photo_object[0];
+
+		$mp3_url = str_replace( '107.170.74.175', 'thefestfl.com', $mp3_url );
+		$photo_url = str_replace( '107.170.74.175', 'thefestfl.com', $photo_url );
+
 		$band = Array( 
 			'id' => $band_ID,
 			'url' => 'https://thefestfl.com/bands/' . $band_result['post_name'] . '/', 
@@ -25,8 +36,8 @@ if ( false === ( get_transient( 'fest13_api_bands' ) ) ) {
 			'bio' => $band_result['post_content'],
 			'bio_text' => wp_strip_all_tags( $band_result['post_content'] ),
 			'hometown' => $band_custom['wpcf-hometown'][0],
-			'photo_url' => $band_custom['wpcf-photo'][0],
-			'mp3_url' => $band_custom['wpcf-mp3'][0],
+			'photo_url' => $photo_url,
+			'mp3_url' => $mp3_url,
 			'video_url' => $band_custom['wpcf-video-url'][0]
 		);
 

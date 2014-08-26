@@ -1,5 +1,6 @@
 <?php
 	$args = array ( 
+		'post_status' => 'publish',
 		'tax_query' => array(
 			array(
 				'taxonomy' => 'product_cat',

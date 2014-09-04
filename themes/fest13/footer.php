@@ -11,10 +11,10 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="row" id="fest-footer">
 				<div class="col-xs-12 col-sm-6 col-md-6 social-media">
-	                <a target="_blank" href="https://www.facebook.com/pages/THE-FEST/135233613179048"><img src="<?php bloginfo( 'template_directory' ); ?>/img/social/facebook-48-white.png" /></a>
-	                <a target="_blank" href="https://twitter.com/thefestfl"><img src="<?php bloginfo( 'template_directory' ); ?>/img/social/twitter-48-white.png" /></a>
-	                <a target="_blank" href="http://instagram.com/thefestfl"><img src="<?php bloginfo( 'template_directory' ); ?>/img/social/instagram-48-white.png" /></a>
-	                <a target="_blank" href="http://www.flickr.com/photos/thefestfl/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/social/flickr-48-white.png" /></a>
+	                <a target="_blank" href="<?php echo !is_prefest() ? 'https://www.facebook.com/thefestfl' : 'https://www.facebook.com/prefestybor'; ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/img/social/facebook-48-white.png" alt="Facebook" /></a>
+	                <a target="_blank" href="https://twitter.com/thefestfl"><img src="<?php bloginfo( 'template_directory' ); ?>/img/social/twitter-48-white.png" alt="Twitter" /></a>
+	                <a target="_blank" href="http://instagram.com/thefestfl"><img src="<?php bloginfo( 'template_directory' ); ?>/img/social/instagram-48-white.png" alt="Instagram" /></a>
+	                <a target="_blank" href="http://www.flickr.com/photos/thefestfl/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/social/flickr-48-white.png" alt="Flickr" /></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-6 site-info">
 					Fest 13 artwork by <a target="_blank" href="<?php echo esc_url( __( 'http://www.theblackaxe.com' ) ); ?>">Richard Minino aka HORSEBITES</a><br />
@@ -22,6 +22,12 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="row" id="fest-ads">
+			<div class="col-xs-12">
+				<a target="_blank" href="http://flygainesville.com" title="Gainesville Regional Airport"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ads/original-gnv_fest14_webad_300x100.jpg" title="Gainesville Regional Airport" /></a>
+			</div>
+		</div>
 
 		<div class="row" id="fest-tier-two-sponsors">
 			<div class="col-xs-12">

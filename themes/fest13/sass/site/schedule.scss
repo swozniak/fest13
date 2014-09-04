@@ -53,6 +53,10 @@
 .schedule-venue-container {
 	background-color: #3ea9b3;
 	margin: 1em;
+
+	td {
+	vertical-align: top;
+	}
 }
 
 // sort by time
@@ -72,6 +76,7 @@
 		td {
 			font-size: 14px; 
 			padding: 8px;
+			vertical-align: top;
 		}
 	}
 }

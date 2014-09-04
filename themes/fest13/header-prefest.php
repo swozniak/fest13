@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="<?php echo $desc; ?>" />
 
-	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo( 'template_directory '); ?>/img/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="//thefestfl.com/wp-content/themes/fest13/img/favicon.ico" />
 
 	<!-- <link href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" rel="stylesheet" media="screen, projection" />-->
 	<link href="//thefestfl.com/wp-content/themes/fest13/style.css" type="text/css" rel="stylesheet" media="screen, projection" />

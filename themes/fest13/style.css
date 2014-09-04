@@ -5364,6 +5364,10 @@ hr.widget-divider {
   #fest-footer .site-info {
     text-align: right;
     margin-top: 10px; } }
+#fest-ads {
+  text-align: center;
+  margin-top: 18px; }
+
 #fest-tier-two-sponsors, #fest-tier-three-sponsors {
   margin: 24px 0;
   text-align: center; }
@@ -5593,6 +5597,8 @@ input#band-search {
 .schedule-venue-container {
   background-color: #3ea9b3;
   margin: 1em; }
+  .schedule-venue-container td {
+    vertical-align: top; }
 
 .table-time-sort {
   width: 100%; }
@@ -5607,7 +5613,8 @@ input#band-search {
     background-color: #24575C; }
   .table-time-sort tbody td {
     font-size: 14px;
-    padding: 8px; }
+    padding: 8px;
+    vertical-align: top; }
 
 @media only screen and (min-width: 960px) {
   .col-sm-offset-2 {
@@ -5950,7 +5957,7 @@ input#video-search {
       text-align: center; }
       .page-template-page-templatesstore-php #content #content-column .woocommerce ul.products li.product, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .woocommerce ul.products li.product, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .woocommerce ul.products li.product {
         width: 100%; }
-        .page-template-page-templatesstore-php #content #content-column .single-day-ticket .woocommerce ul.products li.product img.wp-post-image, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .woocommerce ul.products li.product img.wp-post-image, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .woocommerce ul.products li.product img.wp-post-image {
+        .page-template-page-templatesstore-php #content #content-column .woocommerce ul.products li.product img.wp-post-image, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .woocommerce ul.products li.product img.wp-post-image, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .woocommerce ul.products li.product img.wp-post-image {
           display: none; }
   .page-template-page-templatesstore-php #content #content-column .single-day-tickets .single-day-ticket, .page-template-page-templatesstore-php .single-product.woocommerce #content div.product .single-day-tickets .single-day-ticket, .single-product.woocommerce .page-template-page-templatesstore-php #content div.product .single-day-tickets .single-day-ticket {
     color: white;

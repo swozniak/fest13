@@ -47,10 +47,12 @@ class wp_fest13_social_media_widget extends WP_Widget {
 		}
 
 		echo '<div class="social-media-sidebar">
-			<a target="_blank" href="https://www.facebook.com/pages/THE-FEST/135233613179048"><img src="' . get_bloginfo( 'template_directory' ) . '/img/social/facebook-48-white.png" /></a>
-            <a target="_blank" href="https://twitter.com/thefestfl"><img src="' . get_bloginfo( 'template_directory' ) . '/img/social/twitter-48-white.png" /></a>
-            <a target="_blank" href="http://instagram.com/thefestfl"><img src="' . get_bloginfo( 'template_directory' ) . '/img/social/instagram-48-white.png" /></a>
-            <a target="_blank" href="http://www.flickr.com/photos/thefestfl/"><img src="' . get_bloginfo( 'template_directory' ) . '/img/social/flickr-48-white.png" /></a>
+			<a target="_blank" href="';
+		echo !is_prefest() ? 'https://www.facebook.com/thefestfl' : 'https://www.facebook.com/prefestybor';
+		echo '"><img src="' . get_bloginfo( 'template_directory' ) . '/img/social/facebook-48-white.png" alt="Facebook" /></a>
+            <a target="_blank" href="https://twitter.com/thefestfl"><img src="' . get_bloginfo( 'template_directory' ) . '/img/social/twitter-48-white.png" alt="Twitter" /></a>
+            <a target="_blank" href="http://instagram.com/thefestfl"><img src="' . get_bloginfo( 'template_directory' ) . '/img/social/instagram-48-white.png" alt="Instagram" /></a>
+            <a target="_blank" href="http://www.flickr.com/photos/thefestfl/"><img src="' . get_bloginfo( 'template_directory' ) . '/img/social/flickr-48-white.png" alt="Flickr" /></a>
             </div>';
 
 		echo '</div>';

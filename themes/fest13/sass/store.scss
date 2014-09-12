@@ -68,10 +68,6 @@
 
 					li.product {
 						width: 100%;
-
-						img.wp-post-image {
-							display: none;
-						}
 					}
 				}
 			}
@@ -101,6 +97,12 @@
 
 						ul {
 							margin: 0;
+
+							li {
+								img {
+									display: none;
+								}
+							}
 						}
 					}
 				}

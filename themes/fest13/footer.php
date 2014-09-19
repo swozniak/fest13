@@ -26,6 +26,8 @@
 		<div class="row" id="fest-ads">
 			<div class="col-xs-12">
 				<a target="_blank" href="http://flygainesville.com" title="Gainesville Regional Airport"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ads/original-gnv_fest14_webad_300x100.jpg" title="Gainesville Regional Airport" /></a>
+				<a target="_blank" href="http://6dollarshirts.com" title="6 Dollar Shirts"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ads/6DS-Fest-Banner2_300x100.jpg" title="6 Dollar Shirts" /></a>
+				<a target="_blank" href="http://sjcdrums.com" title="SJC Drums"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ads/SJC-FestWeb300x100.jpg" title="SJC Drums" /></a>
 			</div>
 		</div>
 
@@ -64,9 +66,8 @@
 			  <a target="_blank" href="http://www.kissofdeathrecords.com/" title="Kiss of Death Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/kiss_of_death.png" alt="Kiss of Death Records" /></a>
 			  <a target="_blank" href="http://riceandbreadmagazine.com/" title="Rice &amp; Bread Magazine"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/ricebread.png" alt="Rice &amp; Bread Magazine" /></a>
 			  <a target="_blank" href="http://sideonedummy.com/" title="SideOneDummy Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/sideonedummy.png" alt="SideOneDummy Records" /></a>
-			  <a target="_blank" href="http://swamphead.com/" title="Swamp Head Brewery"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/swamphead.png" alt="Swamp Head Brewery" /></a>
-			  <a target="_blank" href="http://www.thebricksybor.com/" title="The Bricks"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/thebricks.png" alt="The Bricks" /></a>
-			  <a target="_blank" href="http://www.skateparkoftampa.com/" title="Skate Park of Tampa"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/spot.png" alt="Skate Park of Tampa" /></a>
+			  <a target="_blank" href="http://6dollarshirts.com" title="6 Dollar Shirts"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/6ds.png" title="6 Dollar Shirts" /></a>
+		  	  <a target="_blank" href="http://www.hooliganskate.com" title="Hooligan Skateboards"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/hooligan.png" title="Hooligan Skateboards" /></a>
 			</div>
 		</div>
 	</div>

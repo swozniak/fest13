@@ -303,6 +303,10 @@ hr.widget-divider {
 #fest-ads {
 	text-align: center;
 	margin-top: 14px;
+
+	> div > a > img {
+		margin: 0 3px 0;
+	}
 }
 
 #fest-tier-two-sponsors, #fest-tier-three-sponsors {

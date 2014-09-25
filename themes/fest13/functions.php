@@ -10,6 +10,18 @@ include_once( get_stylesheet_directory() . '/functions/checkout.php' );
 
 include_once( get_stylesheet_directory() . '/functions/videos/fest-videos.php' );
 
+/* ADD ADMIN CSS FOR REG VOLUNTEERS
+*****************************************************************************/
+$current_user = get_user_by( 'id', get_current_user_id() );
+if( in_array( 'registration_volunteer', $current_user->roles ) ) :
+	add_action( 'admin_head', 'admin_css' );
+	function admin_css() {
+		echo '<style>';
+			include( locate_template( 'admin-css.php' ) );
+		echo '</style>';
+	}
+endif;
+
 // Add thumbnail support
 add_theme_support( 'post-thumbnails' );
 

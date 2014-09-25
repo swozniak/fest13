@@ -23,6 +23,21 @@ a.add-new-h2,
 	.bulk_actions {
 		display: none;	
 	}
+
+	.line_cost,
+	.line_tax,
+	.tax_class {
+		display: none;
+	}
+
+	.quantity {
+		font-size: 15px;
+		font-weight: bold;
+	}
+
+	.name a {
+		pointer-events: none;
+	}
 }
 
 #woocommerce-order-actions {
@@ -38,6 +53,95 @@ a.add-new-h2,
 	}
 }
 
+.address a {
+	pointer-events: none;
+}
+
 .note.customer-note {
 	display: block;
+}
+
+
+ul.subsubsub {
+	display: none;
+}
+
+p.search-box {
+	float: left;
+	margin: 10px 0;
+}
+
+.widefat td, .widefat th {
+	padding: 15px 10px;
+}
+
+#menu-posts-shop_order ul li:last-child {
+	display: none;
+}
+
+.widefat .column-order_status mark {
+	top: 10px;
+}
+
+.widefat .column-order_status mark.processing:after {
+	color: white;
+	background-color: #73a724;
+	border-radius: 50%;
+}
+.widefat .column-order_status mark.failed:after {
+	color: yellow;
+	background-color: red;
+	border-radius: 50%;
+}
+
+.widefat .column-order_status mark.refunded:after {
+	color: yellow;
+	background-color: red;
+	border-radius: 50%;
+}
+
+form#posts-filter {
+	.tablenav {
+		display: none;
+	}
+
+	table.wp-list-table {
+		width: 200%;
+
+		thead {
+			#cb,
+			#order_actions,
+			#customer_message,
+			#order_notes,
+			#shipping_address {
+				display: none;
+			}
+		}
+
+		tbody {
+			.check-column,
+			.order_actions,
+			.customer_message,
+			.order_notes,
+			.shipping_address {
+				display: none;
+			}
+
+			td.column-order_title {
+				width: 25%;
+				font-size: 13px;
+				font-weight: bold;
+			}
+		}
+
+		tfoot {
+			.column-cb,
+			.column-order_actions,
+			.column-customer-message,
+			.column-order_notes,
+			.column-shipping_address {
+				display: none;
+			}
+		}
+	}
 }

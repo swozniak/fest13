@@ -32,6 +32,13 @@ if ( false === ( get_transient( 'fest13_api_venues' ) ) ) {
 		
 		$venue_urls = Array();
 
+		$photo_url = $venue_custom['wpcf-venue-photo'][0];
+
+		$query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$photo_url'";
+		$photo_id = $wpdb->get_var( $query );
+		$photo_object = wp_get_attachment_image_src( $photo_id, 'medium' );
+		$photo_url = $photo_object[0];
+
 		$venue = Array( 
 			'id' => $venue_ID,
 			'name' => $venue_result['post_title'],
@@ -42,7 +49,7 @@ if ( false === ( get_transient( 'fest13_api_venues' ) ) ) {
 			'city' => $venue_custom['wpcf-city'][0],
 			'longitude' => $venue_custom['wpcf-longitude'][0],
 			'latitude' => $venue_custom['wpcf-latitude'][0],
-			'photo_url' => $venue_custom['wpcf-venue-photo'][0],
+			'photo_url' => $photo_url,
 			'age_limit' => $venue_custom['wpcf-age-limit'][0],
 			'capacity' => $venue_custom['wpcf-capacity'][0],
 			'stage_size' => $venue_custom['wpcf-stage-size'][0],

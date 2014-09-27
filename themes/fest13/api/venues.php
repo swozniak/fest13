@@ -5,20 +5,6 @@
  */
 
 header('Content-Type: application/json');
-/*
-
-    {
-        "_id": "the-ritz",
-        "name": "The Ritz",
-        "address": "1503 E 7th Ave",
-        "latitude": "27.95993",
-        "longitude": "-82.44271",
-        "city": "Tampa",
-        "age_limit": "All Ages"
-    },
-
-
-*/
 
 if ( false === ( get_transient( 'fest13_api_venues' ) ) ) {
 	global $wpdb;

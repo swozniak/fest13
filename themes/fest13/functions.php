@@ -22,6 +22,16 @@ if( in_array( 'registration_volunteer', $current_user->roles ) ) :
 	}
 endif;
 
+
+/* ADDS PICKUP NAMES TO WOOCOMMERCE ORDER SEARCH
+*****************************************************************************/
+add_filter( 'woocommerce_shop_order_search_fields', 'woocommerce_shop_order_search_order_total' );
+function woocommerce_shop_order_search_order_total( $search_fields ) {
+  $search_fields[] = 'Pickup Names';
+ 
+  return $search_fields;
+}
+
 // Add thumbnail support
 add_theme_support( 'post-thumbnails' );
 

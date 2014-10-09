@@ -1,0 +1,62 @@
+/* NAV */
+@media (min-width: 480px) {
+	.container {
+		width: 100%;
+	}
+	.navbar-brand {
+		display: inherit;
+	}
+}
+@media (min-width: 960px) {
+	.container {
+		width: 960px;
+	}
+	.navbar-brand {
+		display: none;
+	}
+}
+
+/* some reset stuff */
+#fest-nav-collapse {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 6px 4px;
+	z-index: 10;
+}
+.navbar {
+	background: rgb(15, 8, 13); /* Fall-back for browsers that don't support rgba */
+	background: rgba(15, 8, 13, 0.8);
+	border: 0px;
+	margin-bottom: 0;
+	margin-top: -84px;
+	z-index: 10;
+}
+.navbar-nav.navbar-right:last-child {
+	margin-right: 0;
+}
+.nav > li > a {
+	padding: 2px 8px;
+	font-size: 14px; 
+	line-height: 20px;
+}
+.navbar-nav {
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+#fest-nav-1 li:nth-child(even) a { color: #e79ac3; }
+#fest-nav-1 li:nth-child(odd) a { color: #c96eac; }
+#fest-nav-2 li:nth-child(even) a { color: #c96eac; }
+#fest-nav-2 li:nth-child(odd) a { color: #e79ac3; }
+#fest-nav-3 a {
+	color: #fff;
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus, .current-menu-item a{
+	color: #555 !important;
+	background-color: #e7e7e7 !important;
+}

@@ -68,6 +68,7 @@
 			  <a target="_blank" href="http://sideonedummy.com/" title="SideOneDummy Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/sideonedummy.png" alt="SideOneDummy Records" /></a>
 			  <a target="_blank" href="http://6dollarshirts.com" title="6 Dollar Shirts"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/6ds.png" title="6 Dollar Shirts" /></a>
 		  	  <a target="_blank" href="http://www.hooliganskate.com" title="Hooligan Skateboards"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/hooligan.png" title="Hooligan Skateboards" /></a>
+		  	  <a target="_blank" href="http://www.punknews.org" title="Punknews"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_3/punknews.png" title="Punknews" /></a>
 			</div>
 		</div>
 	</div>

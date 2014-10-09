@@ -14,8 +14,8 @@
 
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.ico" />
 
-	<!-- <link href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" rel="stylesheet" media="screen, projection" />-->
-	<link href="//thefestfl.com/wp-content/themes/fest13/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
+	<link href="/wp-content/themes/fest13/style.css" type="text/css" rel="stylesheet" media="screen, projection" />
+	
 	<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>"/>
 	<meta property="og:title" content="<?php echo $title; ?>" />
 	<meta property="og:image" content="<?php bloginfo( 'template_directory' ); ?>/img/og-image.jpg" />
@@ -62,6 +62,7 @@
 		  <a target="_blank" href="http://store.noidearecords.com/" title="No Idea Records"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/noidea.png" alt="No Idea Records" /></a>
 		  <a target="_blank" href="http://www.sjcdrums.com/" title="SJC Drums"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/sjc.png" alt="SJC Drums" /></a>
 		  <a target="_blank" href="http://www.pabstblueribbon.com/" title="Pabst Blue Ribbon"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/pbr.png" alt="Pabst Blue Ribbon" /></a>
+		  <a target="_blank" href="http://www.visitgainesville.com/" title="Visit Gainesville"><img src="<?php bloginfo( 'template_directory' ); ?>/img/sponsors/tier_1/visit_gainesville.png" alt="Visit Gainesville" /></a>
 		</div>
 
 		<div class="row" id="fest-splash">

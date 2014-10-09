@@ -1,0 +1,47 @@
+#fest-footer {
+	background: #c76cab;
+	height: 96px;
+	padding: 0 18px;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	color: #fff;
+}
+#fest-footer .site-info a {
+	color: #fff;
+	font-weight: 800;
+}
+#fest-footer .site-info, #fest-footer .site-info a {
+	font-size: 14px;
+}
+@media (min-width: 480px) {
+	#fest-footer {
+		height: 64px;
+	}
+	#fest-footer .social-media {
+		text-align: left;
+		margin-top: 8px;
+	}
+	#fest-footer .site-info {
+		text-align: right;
+		margin-top: 10px;
+	}
+}
+
+#fest-ads {
+	text-align: center;
+	margin-top: 14px;
+
+	> div > a > img {
+		margin: 0 3px 0;
+	}
+}
+
+#fest-tier-two-sponsors, #fest-tier-three-sponsors {
+	margin: 24px 0;
+	text-align: center;
+
+	> div > a > img {
+		margin: 0 0 12px;
+	}
+}

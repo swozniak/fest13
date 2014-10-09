@@ -5109,7 +5109,6 @@ b, strong {
 .img-full-width {
   width: 100%; }
 
-/* HEADER */
 #fest-tier-one-sponsors {
   background: #c76cab;
   /* Fall-back for browsers that don't support rgba */
@@ -5117,9 +5116,18 @@ b, strong {
   padding: 4px 0 6px;
   text-align: center; }
 
-.main-sponsor img {
-  margin: 0 auto; }
+#fest-tier-one-sponsors > a > img {
+  height: 80px; }
 
+@media only screen and (max-width: 990px) {
+  #fest-tier-one-sponsors > a > img {
+    height: 100px; } }
+@media only screen and (min-width: 770px) and (max-width: 990px) {
+  #fest-tier-one-sponsors > a > img {
+    height: 70px; } }
+@media only screen and (min-width: 481px) and (max-width: 699px) {
+  #fest-tier-one-sponsors > a > img {
+    height: 60px; } }
 #fest-splash {
   background: #0f080d;
   /* Fall-back for browsers that don't support rgba */
@@ -5194,7 +5202,6 @@ b, strong {
   color: #555 !important;
   background-color: #e7e7e7 !important; }
 
-/* CONTENT */
 #content {
   color: #fff;
   font-family: 'Open Sans', sans-serif; }
@@ -5260,7 +5267,50 @@ b, strong {
   margin: 0 auto;
   text-align: right; }
 
-/* SIDEBAR */
+.post img {
+  display: block;
+  height: auto;
+  max-width: 100%; }
+
+#fest-footer {
+  background: #c76cab;
+  height: 96px;
+  padding: 0 18px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  color: #fff; }
+
+#fest-footer .site-info a {
+  color: #fff;
+  font-weight: 800; }
+
+#fest-footer .site-info, #fest-footer .site-info a {
+  font-size: 14px; }
+
+@media (min-width: 480px) {
+  #fest-footer {
+    height: 64px; }
+
+  #fest-footer .social-media {
+    text-align: left;
+    margin-top: 8px; }
+
+  #fest-footer .site-info {
+    text-align: right;
+    margin-top: 10px; } }
+#fest-ads {
+  text-align: center;
+  margin-top: 14px; }
+  #fest-ads > div > a > img {
+    margin: 0 3px 0; }
+
+#fest-tier-two-sponsors, #fest-tier-three-sponsors {
+  margin: 24px 0;
+  text-align: center; }
+  #fest-tier-two-sponsors > div > a > img, #fest-tier-three-sponsors > div > a > img {
+    margin: 0 0 12px; }
+
 hr.widget-divider {
   margin-top: 24px;
   margin-bottom: 24px;
@@ -5336,147 +5386,6 @@ hr.widget-divider {
   padding-right: 0;
   margin-bottom: 0; }
 
-/* FOOTER */
-#fest-footer {
-  background: #c76cab;
-  height: 96px;
-  padding: 0 18px;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
-  color: #fff; }
-
-#fest-footer .site-info a {
-  color: #fff;
-  font-weight: 800; }
-
-#fest-footer .site-info, #fest-footer .site-info a {
-  font-size: 14px; }
-
-@media (min-width: 480px) {
-  #fest-footer {
-    height: 64px; }
-
-  #fest-footer .social-media {
-    text-align: left;
-    margin-top: 8px; }
-
-  #fest-footer .site-info {
-    text-align: right;
-    margin-top: 10px; } }
-#fest-ads {
-  text-align: center;
-  margin-top: 14px; }
-  #fest-ads > div > a > img {
-    margin: 0 3px 0; }
-
-#fest-tier-two-sponsors, #fest-tier-three-sponsors {
-  margin: 24px 0;
-  text-align: center; }
-  #fest-tier-two-sponsors > div > a > img, #fest-tier-three-sponsors > div > a > img {
-    margin: 0 0 12px; }
-
-/* BANDS */
-.band {
-  margin-bottom: 16px; }
-
-.bands-image-container {
-  height: 160px;
-  overflow: hidden;
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: 100% auto; }
-
-.bands-name-container {
-  margin-top: -60px;
-  margin-left: 0px; }
-
-.bands-hometown-container {
-  margin-top: -14px;
-  margin-left: 0px; }
-
-.bands-name {
-  margin: 0;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 800;
-  text-decoration: none !important;
-  background-color: #0c1f21;
-  display: inline-block;
-  padding: 6px 8px;
-  margin-right: 8px; }
-
-.bands-hometown {
-  text-transform: uppercase;
-  color: #fff !important;
-  text-decoration: none !important;
-  font-size: 11px;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #0c1f21;
-  display: inline-block;
-  padding: 6px 8px;
-  margin-right: 8px; }
-
-/* BAND TOOLS */
-#bands-tools {
-  margin-bottom: 24px; }
-
-.filter-prefest {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  font-size: 18px;
-  text-align: right;
-  font-weight: 800; }
-
-#prefest-checkbox {
-  margin-left: 8px;
-  background: url("img/checkbox_sprite.png") left top no-repeat;
-  width: 20px;
-  height: 20px;
-  border: 0; }
-
-#prefest-checkbox.active {
-  background-position: -20px 0; }
-
-.bands-search {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  font-size: 18px;
-  text-align: right;
-  font-weight: 800; }
-
-input#band-search {
-  margin-left: 8px;
-  color: #0f080d;
-  border: 2px solid #7f8078;
-  background-color: #fff;
-  padding: 4px;
-  text-transform: uppercase; }
-
-/* BAND */
-.band-content .post-title {
-  background-color: #0c1f21;
-  display: inline-block;
-  padding: 8px 12px;
-  margin-right: 8px;
-  cursor: default; }
-
-.band-content .hometown {
-  background-color: #0c1f21;
-  display: inline-block;
-  padding: 8px 12px;
-  margin-top: -12px;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  cursor: default; }
-
-.band-sidebar-websites {
-  word-break: break-word;
-  font-size: 14px; }
-
 /* responsive */
 @media only screen and (min-width: 700px) and (max-width: 769px) {
   #fest-footer .site-info {
@@ -5546,11 +5455,6 @@ input#band-search {
   #fest-footer .site-info {
     margin-top: -32px;
     font-size: 12px; } }
-.post img {
-  display: block;
-  height: auto;
-  max-width: 100%; }
-
 .schedule-links {
   text-align: right;
   width: 100%; }
@@ -5635,6 +5539,105 @@ input#band-search {
     font-size: 14px; }
   .table-time-sort tbody td {
     font-size: 12px; } }
+.band {
+  margin-bottom: 16px; }
+
+.bands-image-container {
+  height: 160px;
+  overflow: hidden;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 100% auto; }
+
+.bands-name-container {
+  margin-top: -60px;
+  margin-left: 0px; }
+
+.bands-hometown-container {
+  margin-top: -14px;
+  margin-left: 0px; }
+
+.bands-name {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 800;
+  text-decoration: none !important;
+  background-color: #0c1f21;
+  display: inline-block;
+  padding: 6px 8px;
+  margin-right: 8px; }
+
+.bands-hometown {
+  text-transform: uppercase;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0c1f21;
+  display: inline-block;
+  padding: 6px 8px;
+  margin-right: 8px; }
+
+/* BAND TOOLS */
+#bands-tools {
+  margin-bottom: 24px; }
+
+.filter-prefest {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: right;
+  font-weight: 800; }
+
+#prefest-checkbox {
+  margin-left: 8px;
+  background: url("img/checkbox_sprite.png") left top no-repeat;
+  width: 20px;
+  height: 20px;
+  border: 0; }
+
+#prefest-checkbox.active {
+  background-position: -20px 0; }
+
+.bands-search {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: right;
+  font-weight: 800; }
+
+input#band-search {
+  margin-left: 8px;
+  color: #0f080d;
+  border: 2px solid #7f8078;
+  background-color: #fff;
+  padding: 4px;
+  text-transform: uppercase; }
+
+.band-content .post-title {
+  background-color: #0c1f21;
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: 8px;
+  cursor: default; }
+
+.band-content .hometown {
+  background-color: #0c1f21;
+  display: inline-block;
+  padding: 8px 12px;
+  margin-top: -12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  cursor: default; }
+
+.band-sidebar-websites {
+  word-break: break-word;
+  font-size: 14px; }
+
 /* VENUES PAGE */
 .venue {
   margin-bottom: 16px; }
@@ -5677,7 +5680,6 @@ input#band-search {
   padding: 6px 8px;
   margin-right: 8px; }
 
-/* SINGLE VENUE */
 .venue-content .post-title {
   background-color: #0c1f21;
   display: inline-block;
@@ -6169,3 +6171,104 @@ input#video-search {
     color: #ede33d; }
     .page-template-page-templatescheckout-php #content div.form-row.place-order a:hover {
       text-decoration: underline; }
+
+#woocommerce-order-totals,
+.update-nag,
+#edge-mode,
+#postcustom,
+.updated.fade,
+#wc-order-custom-fields,
+#woocommerce-order-downloads,
+#footer-thankyou,
+#order_data .order_data_column:last-child,
+#order_data .order_data_column .form-field label[for="customer_user"],
+.edit_address,
+.edit_order_item,
+#customer_user_chosen,
+.note,
+a.add-new-h2,
+.handlediv {
+  display: none; }
+
+#woocommerce-order-items .add_items,
+#woocommerce-order-items .bulk_actions {
+  display: none; }
+#woocommerce-order-items .line_cost,
+#woocommerce-order-items .line_tax,
+#woocommerce-order-items .tax_class {
+  display: none; }
+#woocommerce-order-items .quantity {
+  font-size: 15px;
+  font-weight: bold; }
+#woocommerce-order-items .name a {
+  pointer-events: none; }
+
+#woocommerce-order-actions #actions {
+  display: none; }
+
+#woocommerce-order-notes select {
+  display: none; }
+
+.address a {
+  pointer-events: none; }
+
+.note.customer-note {
+  display: block; }
+
+ul.subsubsub {
+  display: none; }
+
+p.search-box {
+  float: left;
+  margin: 10px 0; }
+
+.widefat td, .widefat th {
+  padding: 15px 10px; }
+
+#menu-posts-shop_order ul li:last-child {
+  display: none; }
+
+.widefat .column-order_status mark {
+  top: 10px; }
+
+.widefat .column-order_status mark.processing:after {
+  color: white;
+  background-color: #73a724;
+  border-radius: 50%; }
+
+.widefat .column-order_status mark.failed:after {
+  color: yellow;
+  background-color: red;
+  border-radius: 50%; }
+
+.widefat .column-order_status mark.refunded:after {
+  color: yellow;
+  background-color: red;
+  border-radius: 50%; }
+
+form#posts-filter .tablenav {
+  display: none; }
+form#posts-filter table.wp-list-table {
+  width: 200%; }
+  form#posts-filter table.wp-list-table thead #cb,
+  form#posts-filter table.wp-list-table thead #order_actions,
+  form#posts-filter table.wp-list-table thead #customer_message,
+  form#posts-filter table.wp-list-table thead #order_notes,
+  form#posts-filter table.wp-list-table thead #shipping_address {
+    display: none; }
+  form#posts-filter table.wp-list-table tbody .check-column,
+  form#posts-filter table.wp-list-table tbody .order_actions,
+  form#posts-filter table.wp-list-table tbody .customer_message,
+  form#posts-filter table.wp-list-table tbody .order_notes,
+  form#posts-filter table.wp-list-table tbody .shipping_address {
+    display: none; }
+  form#posts-filter table.wp-list-table tbody td.column-order_title {
+    width: 25%;
+    font-size: 13px;
+    font-weight: bold; }
+  form#posts-filter table.wp-list-table tfoot .column-cb,
+  form#posts-filter table.wp-list-table tfoot .column-order_actions,
+  form#posts-filter table.wp-list-table tfoot .column-customer-message,
+  form#posts-filter table.wp-list-table tfoot .column-order_notes,
+  form#posts-filter table.wp-list-table tfoot .column-shipping_address {
+    display: none; }

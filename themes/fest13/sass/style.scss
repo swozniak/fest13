@@ -1,11 +1,26 @@
 @import "bootstrap/bootstrap.min";
 @import "variables.scss";
 @import "mixins.scss";
+
 @import "site.scss";
+@import "site/header.scss";
+@import "site/nav.scss";
+@import "site/content.scss";
+@import "site/footer.scss";
+@import "site/sidebar.scss";
+@import "site/responsive.scss";
+
 @import "site/schedule.scss";
+
+@import "site/bands.scss";
+@import "site/band.scss";
+
 @import "site/venues.scss";
+@import "site/venue.scss";
+
 @import "site/videos.scss";
 @import "site/radio.scss";
+
 @import "store.scss";
 @import "store-sidebar.scss";
 @import "product.scss";

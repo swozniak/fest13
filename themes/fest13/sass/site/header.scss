@@ -1,0 +1,42 @@
+#fest-tier-one-sponsors {
+	background: rgb(199, 108, 171); /* Fall-back for browsers that don't support rgba */
+	background: rgba(199, 108, 171, .9);
+	padding: 4px 0 6px;
+	text-align: center;
+}
+
+#fest-tier-one-sponsors > a > img {
+	height: 80px;
+}
+
+@media only screen 
+and (max-width : 990px) {
+	#fest-tier-one-sponsors > a > img {
+		height: 100px;
+	}
+}
+
+@media only screen 
+and (min-width : 770px) 
+and (max-width : 990px) {
+	#fest-tier-one-sponsors > a > img {
+		height: 70px;
+	}
+}
+@media only screen 
+and (min-width : 481px) 
+and (max-width : 699px) {
+	#fest-tier-one-sponsors > a > img {
+		height: 60px;
+	}
+}
+
+#fest-splash {
+	background: rgb(15, 8, 13); /* Fall-back for browsers that don't support rgba */
+	background-color: rgba(15, 8, 13, .8);
+	opacity: 1;
+	z-index: 5;
+}
+#fest-splash img {
+	margin: 0 0 16px;
+}

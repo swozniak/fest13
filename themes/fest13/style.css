@@ -5122,7 +5122,7 @@ b, strong {
 @media only screen and (max-width: 990px) {
   #fest-tier-one-sponsors > a > img {
     height: 100px; } }
-@media only screen and (min-width: 770px) and (max-width: 990px) {
+@media only screen and (min-width: 831px) and (max-width: 990px) {
   #fest-tier-one-sponsors > a > img {
     height: 70px; } }
 @media only screen and (min-width: 481px) and (max-width: 699px) {
@@ -5399,6 +5399,9 @@ hr.widget-divider {
 
   #fest-tier-three-sponsors a img {
     height: 45px; } }
+@media only screen and (min-width: 700px) and (max-width: 830px) {
+  #fest-tier-one-sponsors > a > img {
+    height: 55px; } }
 @media only screen and (min-width: 480px) and (max-width: 699px) {
   footer .social-media img {
     height: 32px; }
@@ -5459,6 +5462,12 @@ hr.widget-divider {
   #fest-footer .site-info {
     margin-top: -32px;
     font-size: 12px; } }
+@media only screen and (min-width: 481px) and (max-width: 519px) {
+  #fest-tier-one-sponsors > a > img {
+    height: 36px; } }
+@media only screen and (min-width: 520px) and (max-width: 602px) {
+  #fest-tier-one-sponsors > a > img {
+    height: 40px; } }
 .schedule-links {
   text-align: right;
   width: 100%; }

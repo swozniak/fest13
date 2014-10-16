@@ -16,6 +16,13 @@ and (max-width : 769px) {
 	}
 }
 
+@media only screen 
+and (min-width : 700px) 
+and (max-width : 830px) {
+	#fest-tier-one-sponsors > a > img {
+		height: 55px;
+	}
+}
 
 @media only screen 
 and (min-width : 480px) 
@@ -95,5 +102,20 @@ and (max-width : 699px) {
 	#fest-footer .site-info {
 		margin-top: -32px;
 		font-size: 12px;
+	}
+}
+
+@media only screen 
+and (min-width : 481px) 
+and (max-width : 519px) {
+	#fest-tier-one-sponsors > a > img {
+		height: 36px;
+	}
+}
+@media only screen 
+and (min-width : 520px) 
+and (max-width : 602px) {
+	#fest-tier-one-sponsors > a > img {
+		height: 40px;
 	}
 }

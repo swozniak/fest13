@@ -9,7 +9,8 @@ include_once( get_stylesheet_directory() . '/functions/store.php' );
 include_once( get_stylesheet_directory() . '/functions/checkout.php' );
 include_once( get_stylesheet_directory() . '/functions/get-missed-orders.php' );
 
-include_once( get_stylesheet_directory() . '/functions/videos/fest-videos.php' );
+include_once( get_stylesheet_directory() . '/functions/admin/fest-schedule.php' );
+include_once( get_stylesheet_directory() . '/functions/admin/fest-videos.php' );
 
 /* ADD ADMIN CSS FOR REG VOLUNTEERS
 *****************************************************************************/

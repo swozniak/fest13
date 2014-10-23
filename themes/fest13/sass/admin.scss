@@ -100,9 +100,22 @@ p.search-box {
 	border-radius: 50%;
 }
 
+#tiptip_holder {
+	left: -80px;
+}
+
 form#posts-filter {
 	.tablenav {
-		display: none;
+		clear: none;
+		float: right;
+
+		.actions {
+			display: none;
+		}
+		
+		.view-switch {
+			display: none;
+		}
 	}
 
 	table.wp-list-table {

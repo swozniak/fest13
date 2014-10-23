@@ -72,8 +72,16 @@ p.search-box {
   background-color: red;
   border-radius: 50%; }
 
+#tiptip_holder {
+  left: -80px; }
+
 form#posts-filter .tablenav {
-  display: none; }
+  clear: none;
+  float: right; }
+  form#posts-filter .tablenav .actions {
+    display: none; }
+  form#posts-filter .tablenav .view-switch {
+    display: none; }
 form#posts-filter table.wp-list-table {
   width: 200%; }
   form#posts-filter table.wp-list-table thead #cb,

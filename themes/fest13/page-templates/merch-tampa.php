@@ -31,6 +31,10 @@ if( current_user_can( 'edit_shop_orders' ) ) :
 							$counts[$item['name']]['variations'][$item['pa_room-type']] += $item['qty'];
 						elseif( isset( $item['pa_size'] ) && !empty( $item['pa_size'] ) ) :
 							$counts[$item['name']]['variations'][$item['pa_size']] += $item['qty'];
+						elseif( isset( $item['pa_color'] ) && !empty( $item['pa_color'] ) ) :
+							$counts[$item['name']]['variations'][$item['pa_color']] += $item['qty'];
+						elseif( isset( $item['pa_case-design'] ) && !empty( $item['pa_case-design'] ) ) :
+							$counts[$item['name']]['variations'][$item['pa_case-design']] += $item['qty'];
 						endif;
 					else :
 						$counts[$item['name']]['qty'] += $item['qty'];

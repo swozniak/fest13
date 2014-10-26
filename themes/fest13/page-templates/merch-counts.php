@@ -1,11 +1,12 @@
 <?php
 /**
- * Template Name: Counts
+ * Template Name: Merch Counts
  *
  */
 
 if( current_user_can( 'edit_shop_orders' ) ) :
 	$counts = array();
+	$merch = array( 'shirt', 'hoodie', 'accessory' );
 	$query = array(
 		'post_type' => 'shop_order',
 		'posts_per_page' => -1,
@@ -23,18 +24,20 @@ if( current_user_can( 'edit_shop_orders' ) ) :
 	while( $orders->have_posts() ) : $orders->the_post(); 
 		$order = new WC_Order( get_the_ID() ); 
 		foreach( $order->get_items() as $item ) : 
-			if( isset( $item['variation_id'] ) && !empty( $item['variation_id'] ) ) :
-				if( isset( $item['pa_room-type'] ) && !empty( $item['pa_room-type'] ) ) :
-					$counts[$item['name']]['variations'][$item['pa_room-type']] += $item['qty'];
-				elseif( isset( $item['pa_size'] ) && !empty( $item['pa_size'] ) ) :
-					$counts[$item['name']]['variations'][$item['pa_size']] += $item['qty'];
-				elseif( isset( $item['pa_color'] ) && !empty( $item['pa_color'] ) ) :
-					$counts[$item['name']]['variations'][$item['pa_color']] += $item['qty'];
-				elseif( isset( $item['pa_case-design'] ) && !empty( $item['pa_case-design'] ) ) :
-					$counts[$item['name']]['variations'][$item['pa_case-design']] += $item['qty'];
+			if( has_term( $merch, 'product_cat', get_post( $item['product_id'] ) ) ) :	
+				if( isset( $item['variation_id'] ) && !empty( $item['variation_id'] ) ) :
+					if( isset( $item['pa_room-type'] ) && !empty( $item['pa_room-type'] ) ) :
+						$counts[$item['name']]['variations'][$item['pa_room-type']] += $item['qty'];
+					elseif( isset( $item['pa_size'] ) && !empty( $item['pa_size'] ) ) :
+						$counts[$item['name']]['variations'][$item['pa_size']] += $item['qty'];
+					elseif( isset( $item['pa_color'] ) && !empty( $item['pa_color'] ) ) :
+						$counts[$item['name']]['variations'][$item['pa_color']] += $item['qty'];
+					elseif( isset( $item['pa_case-design'] ) && !empty( $item['pa_case-design'] ) ) :
+						$counts[$item['name']]['variations'][$item['pa_case-design']] += $item['qty'];
+					endif;
+				else :
+					$counts[$item['name']]['qty'] += $item['qty'];
 				endif;
-			else :
-				$counts[$item['name']]['qty'] += $item['qty'];
 			endif;
 		endforeach;
 	endwhile;
@@ -43,10 +46,10 @@ endif;
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>FEST 13 COUNTS</title>
+		<title>FEST 13 MERCH COUNTS</title>
 	</head>
 	<body class="names">
-		<h1>FEST 13 COUNTS</h1>
+		<h1>FEST 13 MERCH COUNTS</h1>
 		<table border="1" cellspacing="0" cellpadding="4px">
 			<thead align="left">
 				<th>Counts</th>
@@ -55,7 +58,7 @@ endif;
 			<?php foreach( $counts as $name => $count ) : ?>
 				<?php if( isset( $count['variations'] ) ) : ?>
 					<tr>
-						<td></td>
+						<td style="background-color: #CCC;"></td>
 						<td style="background-color: #CCC;"><strong><?php echo $name; ?></strong></td>
 					</tr>
 					<?php foreach( $count['variations'] as $var_name => $var_qty ) : ?>
@@ -67,7 +70,7 @@ endif;
 
 				<?php else: ?>
 					<tr>
-						<td align="center"><?php echo number_format( $count['qty'] ); ?></td>
+						<td style="background-color: #CCC;"align="center"><?php echo number_format( $count['qty'] ); ?></td>
 						<td style="background-color: #CCC;"><strong><?php echo $name; ?></strong></td>
 					</tr>
 				<?php endif; ?>

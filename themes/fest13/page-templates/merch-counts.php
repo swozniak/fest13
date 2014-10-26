@@ -58,7 +58,7 @@ endif;
 			<?php foreach( $counts as $name => $count ) : ?>
 				<?php if( isset( $count['variations'] ) ) : ?>
 					<tr>
-						<td style="background-color: #CCC;"></td>
+						<td></td>
 						<td style="background-color: #CCC;"><strong><?php echo $name; ?></strong></td>
 					</tr>
 					<?php foreach( $count['variations'] as $var_name => $var_qty ) : ?>
@@ -70,7 +70,7 @@ endif;
 
 				<?php else: ?>
 					<tr>
-						<td style="background-color: #CCC;"align="center"><?php echo number_format( $count['qty'] ); ?></td>
+						<td align="center"><?php echo number_format( $count['qty'] ); ?></td>
 						<td style="background-color: #CCC;"><strong><?php echo $name; ?></strong></td>
 					</tr>
 				<?php endif; ?>

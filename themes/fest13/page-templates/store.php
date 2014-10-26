@@ -10,9 +10,9 @@
 <?php
 	$product_categories = array(
 		'Tickets' => 'ticket',
-		'Shirts' => 'shirt',
-		'Hoodies' => 'hoodie',
-		'Accessories' => 'accessory',
+		//'Shirts' => 'shirt',
+		//'Hoodies' => 'hoodie',
+		//'Accessories' => 'accessory',
 		'Hotels' => 'hotel-room',
 		'Bus Tickets' => 'bus-ticket',
 	);

@@ -6,6 +6,8 @@
 
 header('Content-Type: application/json');
 
+define( 'DONOTCACHEPAGE', true );
+
 $update = array();
 
 $bands = 0;

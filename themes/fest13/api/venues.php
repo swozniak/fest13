@@ -6,6 +6,8 @@
 
 header('Content-Type: application/json');
 
+define( 'DONOTCACHEPAGE', true );
+
 if ( false === ( get_transient( 'fest13_api_venues' ) ) ) {
 	global $wpdb;
 

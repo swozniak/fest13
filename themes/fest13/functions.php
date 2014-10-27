@@ -498,7 +498,6 @@ function delete_radio_transient( $post_id ) {
 }
 add_action( 'save_post', 'delete_radio_transient' );
 
-
 /*
  * api / transient helpers
  */
@@ -540,8 +539,9 @@ function remove_band_events( $post_id ) {
 	}
 }
 
-add_action( 'save_post', 'fest13_transient_handlers' );
-add_action( 'delete_post', 'fest13_transient_handlers' );
 add_action( 'delete_post', 'remove_band_events' );
 add_action( 'trashed_post', 'remove_band_events' );
+
+add_action( 'save_post', 'fest13_transient_handlers' );
+add_action( 'delete_post', 'fest13_transient_handlers' );
 ?>

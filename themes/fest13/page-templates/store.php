@@ -13,7 +13,7 @@
 		//'Shirts' => 'shirt',
 		//'Hoodies' => 'hoodie',
 		//'Accessories' => 'accessory',
-		'Hotels' => 'hotel-room',
+		//'Hotels' => 'hotel-room',
 		'Bus Tickets' => 'bus-ticket',
 	);
 ?>

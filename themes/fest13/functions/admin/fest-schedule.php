@@ -16,16 +16,16 @@ function fest_schedule_menu_options() {
 		delete_transient( 'fest13_api_venues' );
 		delete_transient( 'fest13_api_events' );
 
-		delete_transient( 'fest13_api_bands_updated' );
-		delete_transient( 'fest13_api_venues_updated' );
-		delete_transient( 'fest13_api_events_updated' );
-
 		$protocol = ( !empty( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
 
+		$bands_url = $protocol . $_SERVER['HTTP_HOST'] . '/api/v1/bands?ts=' . time();
+		$bands_response = file_get_contents( $bands_url );
+		$venues_url = $protocol . $_SERVER['HTTP_HOST'] . '/api/v1/venues?ts=' . time();
+		$venues_response = file_get_contents( $venues_url );
 		$events_url = $protocol . $_SERVER['HTTP_HOST'] . '/api/v1/events?ts=' . time();
 		$events_response = file_get_contents( $events_url );
 	?> 
-		All done! Go check the <a href="<?php echo $protocol . $_SERVER['HTTP_HOST']; ?>/schedule/">SCHEDULE</a> page to make sure everything looks good!
+		<p>All done! Go check the <a href="<?php echo $protocol . $_SERVER['HTTP_HOST']; ?>/schedule/">SCHEDULE</a> page to make sure everything looks good!</p>
 	<?php else : ?>
 	<br />
 	<form method="POST">

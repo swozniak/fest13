@@ -14,7 +14,7 @@
 		//'Hoodies' => 'hoodie',
 		//'Accessories' => 'accessory',
 		//'Hotels' => 'hotel-room',
-		'Bus Tickets' => 'bus-ticket',
+		//'Bus Tickets' => 'bus-ticket',
 	);
 ?>
 

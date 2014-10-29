@@ -33,7 +33,7 @@
 		<br>
 		ORDERS MISSED: <?php echo number_format( $missed ); ?> (orders that contained hotels placed before 4/22/2014 12:20am UTC)
 		<br>
-		REFUND PAYMENT ORDERS: <?php echo number_format( $refunds ); ?> (fee was not collected on these)
+		NAME TRANSFER FEES: <?php echo number_format( $refunds ); ?> (fee was not collected on these)
 		<br>
 		<br>
 		ORDERS WITH FEE: <?php echo number_format( ( $order_count - $missed ) - $refunds ); ?>

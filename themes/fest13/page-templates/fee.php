@@ -24,15 +24,19 @@
 		$orders = new WP_Query( $query );
 		$order_count = $orders->found_posts;
 		$missed = get_missed_orders( $orders );
-		$total_fee = '$' . number_format( ( ( $order_count - $missed ) * $fee ), 2 ); 
+		$refunds = count_orders_with_product( $orders, 4099 );
+		
+		$total_fee = '$' . number_format( ( ( ( $order_count - $missed ) - $refunds ) * $fee ), 2 ); 
 	?>
 
 		TOTAL ORDERS: <?php echo number_format( $order_count ); ?>
 		<br>
 		ORDERS MISSED: <?php echo number_format( $missed ); ?> (orders that contained hotels placed before 4/22/2014 12:20am UTC)
 		<br>
+		REFUND PAYMENT ORDERS: <?php echo number_format( $refunds ); ?> (fee was not collected on these)
 		<br>
-		ORDERS WITH FEE: <?php echo number_format( $order_count - $missed ); ?>
+		<br>
+		ORDERS WITH FEE: <?php echo number_format( ( $order_count - $missed ) - $refunds ); ?>
 		<br>
 		FEE: <strong><?php echo $total_fee; ?></strong>
 	<?php endif; ?>

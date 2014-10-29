@@ -23,4 +23,20 @@ function get_missed_orders( $orders ) {
 
 	return $missed;
 }
+
+function count_orders_with_product( $orders, $product_id ) {
+	
+	$count = 0;
+	 while( $orders->have_posts() ) : $orders->the_post(); 
+		$order = new WC_Order( get_the_ID() );
+		$items = $order->get_items();
+		foreach( $items as $item ) :
+			if( $item['product_id'] == $product_id ) :
+				$count += $item['qty'];
+			endif;	
+		endforeach;
+	 endwhile;
+	
+	return $count;
+}
 ?>
